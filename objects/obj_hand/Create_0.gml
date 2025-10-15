@@ -1,20 +1,9 @@
-#macro MAXHAND 2
-card_width = 60;
-card_height = 86;
-hand_x = 648;
-hand_y = 542;
+deckObj = obj_deck;
 handCount = 0;
-
-for(i = 0; i < 7; i ++) {
-	hand[i] = 0;
-}
-
-//i = 0;
-
-//hand[i++] = 11;
-//hand[i++] = 12;
-
-//handCount = i;
-
-
-scr_init_sprite_array();
+hand = [];
+handCard = [];
+hand_position = 0;
+cardNum = 0;
+card_drawn = false;
+handType = "DEALER";
+maxHand = 2;

@@ -10,8 +10,8 @@
   "name":"obj_deck",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Deck",
+    "path":"folders/Objects/Deck.yy",
   },
   "parentObjectId":null,
   "persistent":false,
