@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_deal",
+  "%Name":"scr_flip_card",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_deal",
+  "name":"scr_flip_card",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

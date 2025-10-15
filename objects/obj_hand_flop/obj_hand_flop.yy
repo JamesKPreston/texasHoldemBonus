@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_deck",
+  "%Name":"obj_hand_flop",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_deck",
+  "name":"obj_hand_flop",
   "overriddenProperties":[],
   "parent":{
-    "name":"Deck",
-    "path":"folders/Objects/Deck.yy",
+    "name":"Flop",
+    "path":"folders/Objects/Flop.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_hand",
+    "path":"objects/obj_hand/obj_hand.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

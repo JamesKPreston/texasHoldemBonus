@@ -14,3 +14,4 @@ if(card_in_hand) {
 		speed = 0;
 	}
 }
+

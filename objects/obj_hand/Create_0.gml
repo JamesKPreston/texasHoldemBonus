@@ -1,0 +1,9 @@
+deckObj = obj_deck;
+handCount = 0;
+hand = [];
+handCard = [];
+hand_position = 0;
+cardNum = 0;
+card_drawn = false;
+handType = "DEALER";
+maxHand = 2;

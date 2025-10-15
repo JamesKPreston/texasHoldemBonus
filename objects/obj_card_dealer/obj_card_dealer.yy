@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_deck",
+  "%Name":"obj_card_dealer",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_deck",
+  "name":"obj_card_dealer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Deck",
-    "path":"folders/Objects/Deck.yy",
+    "name":"Dealer",
+    "path":"folders/Objects/Dealer.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_card",
+    "path":"objects/obj_card/obj_card.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_card_back",
+    "path":"sprites/spr_card_back/spr_card_back.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

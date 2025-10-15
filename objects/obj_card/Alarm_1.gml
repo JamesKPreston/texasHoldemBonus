@@ -1,1 +1,1 @@
-sprite_index = sprite_array[cardNum];
+scr_flip_card();

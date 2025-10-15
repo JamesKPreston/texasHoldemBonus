@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dealer_hand",
+  "%Name":"obj_hand_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_dealer_hand",
+  "name":"obj_hand_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":{
-    "name":"obj_player",
-    "path":"objects/obj_player/obj_player.yy",
+    "name":"obj_hand",
+    "path":"objects/obj_hand/obj_hand.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
