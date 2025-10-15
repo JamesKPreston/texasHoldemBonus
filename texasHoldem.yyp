@@ -40,6 +40,7 @@
   },
   "name":"texasHoldem",
   "resources":[
+    {"id":{"name":"obj_card","path":"objects/obj_card/obj_card.yy",},},
     {"id":{"name":"obj_dealer_hand","path":"objects/obj_dealer_hand/obj_dealer_hand.yy",},},
     {"id":{"name":"obj_deck","path":"objects/obj_deck/obj_deck.yy",},},
     {"id":{"name":"obj_player_hand","path":"objects/obj_player_hand/obj_player_hand.yy",},},

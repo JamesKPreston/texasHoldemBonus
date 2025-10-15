@@ -21,3 +21,8 @@ if(keyboard_check_released(vk_shift)) {
 	player.hand = [];
 	player.handCount = 0;
 }
+
+if(keyboard_check_released(vk_escape))
+{
+	game_restart();
+}

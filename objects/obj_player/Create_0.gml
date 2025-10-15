@@ -7,6 +7,7 @@ handCount = 0;
 
 for(i = 0; i < 7; i ++) {
 	hand[i] = 0;
+	handCard[i] = noone;
 }
 
 //i = 0;
