@@ -12,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_hand",
-    "path":"objects/obj_hand/obj_hand.yy",
+    "name":"obj_player",
+    "path":"objects/obj_player/obj_player.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
