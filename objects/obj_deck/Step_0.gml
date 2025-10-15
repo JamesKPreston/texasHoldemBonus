@@ -14,12 +14,20 @@ if(keyboard_check_released(vk_left) ){
 
 if(keyboard_check_released(vk_tab)) {
 	
-	with(player){ scr_deal(2)};
+	with(player){ 
+		scr_deal(1
+	)};
+	with(player){ 
+		scr_deal(1
+	)};
 }
 
 if(keyboard_check_released(vk_shift)) {
 	player.hand = [];
 	player.handCount = 0;
+	with (obj_card) {
+    instance_destroy();
+}
 }
 
 if(keyboard_check_released(vk_escape))

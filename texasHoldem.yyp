@@ -45,6 +45,7 @@
     {"id":{"name":"obj_deck","path":"objects/obj_deck/obj_deck.yy",},},
     {"id":{"name":"obj_player_hand","path":"objects/obj_player_hand/obj_player_hand.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"deck_draw_path","path":"paths/deck_draw_path/deck_draw_path.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_deal","path":"scripts/scr_deal/scr_deal.yy",},},
     {"id":{"name":"scr_init_sprite_array","path":"scripts/scr_init_sprite_array/scr_init_sprite_array.yy",},},
