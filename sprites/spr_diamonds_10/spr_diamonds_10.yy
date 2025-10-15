@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_clubs_11",
+  "%Name":"spr_diamonds_10",
   "bboxMode":0,
   "bbox_bottom":82,
   "bbox_left":0,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"edda7522-928b-4999-b557-24ff54a0428c","name":"edda7522-928b-4999-b557-24ff54a0428c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"97c17424-792f-4178-95c5-7a9accf929fd","name":"97c17424-792f-4178-95c5-7a9accf929fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":86,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e46f6496-5a4e-48f6-9f5d-afe8375540a1","blendMode":0,"displayName":"default","isLocked":false,"name":"e46f6496-5a4e-48f6-9f5d-afe8375540a1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f98c6891-cb76-47dc-acf0-35034dd5caa3","blendMode":0,"displayName":"default","isLocked":false,"name":"f98c6891-cb76-47dc-acf0-35034dd5caa3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_clubs_11",
+  "name":"spr_diamonds_10",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Clubs",
-    "path":"folders/Sprites/cards/Suits/Clubs.yy",
+    "name":"Diamonds",
+    "path":"folders/Sprites/cards/Suits/Diamonds.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_clubs_11",
+    "%Name":"spr_diamonds_2",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_clubs_11",
+    "name":"spr_diamonds_2",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"edda7522-928b-4999-b557-24ff54a0428c","path":"sprites/spr_clubs_11/spr_clubs_11.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5cd771d8-9135-417a-982e-33ed3bf2652b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97c17424-792f-4178-95c5-7a9accf929fd","path":"sprites/spr_diamonds_10/spr_diamonds_10.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2daaded3-3c6a-4465-8b47-242920f82640","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

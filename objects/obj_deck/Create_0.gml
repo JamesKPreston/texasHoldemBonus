@@ -22,7 +22,7 @@ scr_init_sprite_array();
 deckCount = 0;
 deckPoint = 0;
 
-for(i = 0; i < 13; i ++) {
+for(i = 0; i < 26; i ++) {
 	deck[i] = 0;
 }
 
@@ -41,6 +41,19 @@ deck[i++] = 10;
 deck[i++] = 11;
 deck[i++] = 12;
 deck[i++] = 13;
+deck[i++] = 14;
+deck[i++] = 15;
+deck[i++] = 16;
+deck[i++] = 17;
+deck[i++] = 18;
+deck[i++] = 19;
+deck[i++] = 20;
+deck[i++] = 21;
+deck[i++] = 22;
+deck[i++] = 23;
+deck[i++] = 24;
+deck[i++] = 25;
+deck[i++] = 26;
 
 
 deckCount = i;
