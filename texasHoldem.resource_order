@@ -24,6 +24,8 @@
   "ResourceOrderSettings":[
     {"name":"obj_dealer_hand","order":3,"path":"objects/obj_dealer_hand/obj_dealer_hand.yy",},
     {"name":"obj_player_hand","order":1,"path":"objects/obj_player_hand/obj_player_hand.yy",},
+    {"name":"scr_deal","order":2,"path":"scripts/scr_deal/scr_deal.yy",},
+    {"name":"scr_shuffle_deck","order":1,"path":"scripts/scr_shuffle_deck/scr_shuffle_deck.yy",},
     {"name":"spr_card_back","order":14,"path":"sprites/spr_card_back/spr_card_back.yy",},
     {"name":"spr_card_front","order":15,"path":"sprites/spr_card_front/spr_card_front.yy",},
     {"name":"spr_clubs_11","order":1,"path":"sprites/spr_clubs_11/spr_clubs_11.yy",},
