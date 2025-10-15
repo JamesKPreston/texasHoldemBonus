@@ -20,6 +20,12 @@ function scr_draw(){
 			case "FLOP":
 				cardObj = obj_card_flop;
 			break;
+			case "TURN":
+				cardObj = obj_card_turn;
+			break;
+			case "RIVER":
+				cardObj = obj_card_river;
+			break;
 		}
 		
 		if(cardObj != noone) {

@@ -12,15 +12,25 @@ if(keyboard_check_released(vk_left) ){
 	scr_shuffle_deck();
 }
 
-//if(keyboard_check_released(vk_tab)) {
+if(keyboard_check_released(vk_tab)) {
 	
-//	with(player){ 
-//		scr_deal(1
-//	)};
-//	with(player){ 
-//		scr_deal(1
-//	)};
-//}
+	switch(++stage) {
+		case 1:
+			with(flop) { 
+				face_up = true;
+				scr_flip_card();}
+			break;
+		case 2:
+			with(turn) { face_up = true; scr_flip_card();}
+			break;
+		case 3:
+			with(river) { face_up = true;  scr_flip_card(); }
+			break;
+		case 4:
+			with(dealer) { face_up = true; scr_flip_card(); }
+			break;
+	}
+}
 
 //if(keyboard_check_released(vk_shift)) {
 //	player.hand = [];

@@ -10,6 +10,8 @@
     {"name":"inst_2FC80061","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_445D9AF7","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_5D302F54","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_FA744D8","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_48C7FB55","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -19,6 +21,8 @@
         {"$GMRInstance":"v2","%Name":"inst_2FC80061","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2FC80061","objectId":{"name":"obj_hand_player","path":"objects/obj_hand_player/obj_hand_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":576.0,},
         {"$GMRInstance":"v2","%Name":"inst_445D9AF7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_445D9AF7","objectId":{"name":"obj_hand_dealer","path":"objects/obj_hand_dealer/obj_hand_dealer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":320.0,},
         {"$GMRInstance":"v2","%Name":"inst_5D302F54","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5D302F54","objectId":{"name":"obj_hand_flop","path":"objects/obj_hand_flop/obj_hand_flop.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":928.0,"y":416.0,},
+        {"$GMRInstance":"v2","%Name":"inst_FA744D8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_FA744D8","objectId":{"name":"obj_hand_turn","path":"objects/obj_hand_turn/obj_hand_turn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":928.0,"y":608.0,},
+        {"$GMRInstance":"v2","%Name":"inst_48C7FB55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_48C7FB55","objectId":{"name":"obj_hand_river","path":"objects/obj_hand_river/obj_hand_river.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":512.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_54F7529C","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_54F7529C","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.7673936,"scaleY":0.65122616,"spriteId":{"name":"spr_table_blue","path":"sprites/spr_table_blue/spr_table_blue.yy",},"x":768.0,"y":480.0,},
