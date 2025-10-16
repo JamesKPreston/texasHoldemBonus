@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"poker_evaluator_directions",
+  "name":"poker_evaluator_directions",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

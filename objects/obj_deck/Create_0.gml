@@ -14,6 +14,12 @@ flop = obj_card_flop;
 turn = obj_card_turn;
 river = obj_card_river;
 
+player_hand = obj_hand_player;
+dealer_hand = obj_hand_dealer;
+flop_hand = obj_hand_flop;
+turn_hand = obj_hand_turn;
+river_hand = obj_hand_river;
+
 stage = 0;
 
 

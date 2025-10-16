@@ -1,0 +1,18 @@
+// Example 7 cards (ranks 2..14, suits 0..3)
+var seven = [
+    {rank:14, suit:0}, // A♠
+    {rank:13, suit:0}, // K♠
+    {rank:12, suit:0}, // Q♠
+    {rank:11, suit:0}, // J♠
+    {rank:10, suit:0}, // T♠
+    {rank: 9, suit:1}, // 9♥
+    {rank: 2, suit:2}  // 2♦
+];
+
+var result = poker_best5_from7(seven);
+// result.category        -> 8 (Straight Flush)
+// result.category_name   -> "Straight Flush"
+// result.label           -> "Royal Flush"
+// result.best5           -> array of the 5 chosen cards (structs)
+// result.tiebreak        -> comparison key if you need to compare vs another player
+show_debug_message(result.label);
