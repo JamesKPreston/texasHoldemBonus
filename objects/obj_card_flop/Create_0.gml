@@ -2,7 +2,7 @@
 event_inherited();
 
 player = obj_hand_flop;
-xPos = 580;
-yPos = 397;
+xPos = 430;
+yPos = 402;
 face_up = false;
 

@@ -30,6 +30,7 @@ function scr_draw(){
 		
 		if(cardObj != noone) {
 			handCard[handCount - 1] = instance_create_depth(deckObj.deck_x, deckObj.deck_y, -handCount -2, cardObj);
+
 		}
 		
 		

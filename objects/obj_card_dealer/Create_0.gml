@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
 player = obj_hand_dealer;
-xPos = 648;
-yPos = 264;
+xPos = 600;
+yPos = 269;
 face_up = false;

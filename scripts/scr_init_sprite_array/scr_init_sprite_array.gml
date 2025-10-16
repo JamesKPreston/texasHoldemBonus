@@ -29,4 +29,32 @@ sprite_array[i++] = spr_diamonds_10;
 sprite_array[i++] = spr_diamonds_jack;
 sprite_array[i++] = spr_diamonds_queen;
 sprite_array[i++] = spr_diamonds_king;
+
+sprite_array[i++] = spr_hearts_ace;
+sprite_array[i++] = spr_hearts_2;
+sprite_array[i++] = spr_hearts_3;
+sprite_array[i++] = spr_hearts_4;
+sprite_array[i++] = spr_hearts_5;
+sprite_array[i++] = spr_hearts_6;
+sprite_array[i++] = spr_hearts_7;
+sprite_array[i++] = spr_hearts_8;
+sprite_array[i++] = spr_hearts_9;
+sprite_array[i++] = spr_hearts_10;
+sprite_array[i++] = spr_hearts_jack;
+sprite_array[i++] = spr_hearts_queen;
+sprite_array[i++] = spr_hearts_king;
+
+sprite_array[i++] = spr_spades_ace;
+sprite_array[i++] = spr_spades_2;
+sprite_array[i++] = spr_spades_3;
+sprite_array[i++] = spr_spades_4;
+sprite_array[i++] = spr_spades_5;
+sprite_array[i++] = spr_spades_6;
+sprite_array[i++] = spr_spades_7;
+sprite_array[i++] = spr_spades_8;
+sprite_array[i++] = spr_spades_9;
+sprite_array[i++] = spr_spades_10;
+sprite_array[i++] = spr_spades_jack;
+sprite_array[i++] = spr_spades_queen;
+sprite_array[i++] = spr_spades_king;
 }
