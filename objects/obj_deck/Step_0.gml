@@ -32,14 +32,6 @@ if(keyboard_check_released(vk_tab)) {
 	}
 }
 
-//if(keyboard_check_released(vk_shift)) {
-//	player.hand = [];
-//	player.handCount = 0;
-//	with (obj_card) {
-//    instance_destroy();
-//}
-//}
-
 if(keyboard_check_released(vk_escape))
 {
 	game_restart();

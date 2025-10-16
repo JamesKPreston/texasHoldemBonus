@@ -12,9 +12,11 @@ yPos = 542;
 to_x = 0;
 to_y = 0;
 
-card_width = 60;
-card_height = 86;
+//card_width = 60;
+//card_height = 86;
 
+card_width = 90;
+card_height = 129;
 selected = false;
 face_up = true;
 

@@ -3,7 +3,7 @@ event_inherited();
 
 player = obj_hand_player;
 
-xPos =648;
-yPos = 542;
+xPos =600;
+yPos = 547;
 
 
