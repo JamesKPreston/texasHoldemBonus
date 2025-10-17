@@ -1,5 +1,5 @@
-draw_set_color(c_black);
-draw_text(200, 400, string(mouse_x) + " " + string(mouse_y));
+//draw_set_color(c_black);
+//draw_text(200, 400, string(mouse_x) + " " + string(mouse_y));
 
 	for(i = 0; i < deckCount; i ++) {
 		var card_sprite = spr_card_back;
