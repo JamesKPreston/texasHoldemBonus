@@ -9,5 +9,5 @@ chip_value = 5;
 drop_target = noone;   // the ante we're hovering over while dragging
 drag_front_depth = -1000000; // super front during drag
 
-
+targetName = "ANTE";
 // If you want it even tighter, delete the items with 2s, or set a scale < 1 (see below).

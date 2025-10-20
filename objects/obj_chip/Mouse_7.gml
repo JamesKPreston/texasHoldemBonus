@@ -27,6 +27,18 @@ if (is_dragging) {
 
         // Keep later chips drawing above earlier ones
         depth = -py - drop_target.stack_count;
+		if(targetName = "ANTE")
+		{
+			obj_game.ante += chip_value;
+		}
+		if(targetName = "BONUS") 
+		{
+			obj_game.bonus += chip_value;
+		}
+
+		obj_game.player_total_bet = obj_game.ante + obj_game.bonus;
+		show_debug_message("Ante : " + string(obj_game.ante) );
+		show_debug_message("Total : " + string(obj_game.player_total_bet ) );
 
     }
 	else {

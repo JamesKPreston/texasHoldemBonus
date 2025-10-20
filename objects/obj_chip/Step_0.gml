@@ -8,6 +8,7 @@ if (is_dragging) {
     if (hit != noone) {
         drop_target = hit;       // remember it for when we release
         // (optional) give visual feedback: hit.image_blend = c_yellow;
+		targetName = "ANTE";
     } 
 	
 	// check for an ante under this chip while dragging
@@ -15,6 +16,7 @@ if (is_dragging) {
     if (hit2 != noone) {
         drop_target = hit2;       // remember it for when we release
         // (optional) give visual feedback: hit.image_blend = c_yellow;
+		targetName = "BONUS";
     } 
 	
 	if(hit == noone && hit2 == noone) {
