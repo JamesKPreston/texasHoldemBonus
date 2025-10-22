@@ -24,7 +24,7 @@ if (is_dragging) {
         x = px; y = py;
 
         drop_target.stack_count = idx + 1;
-
+		var denoms = [100, 25, 5, 1];
         // Keep later chips drawing above earlier ones
         depth = -py - drop_target.stack_count;
 		if(targetName = "ANTE")
@@ -33,19 +33,20 @@ if (is_dragging) {
 
 		    // mark this chip as belonging to this target so it can be managed
 		    bet_target = obj_ante;
-		    targetName = "ANTE";
 
 		    if (!obj_game.is_rebuilding)
 		    {
-		        // Rebuild if a fewer-chip representation exists
-		        var denomsAnte = [100, 25, 5, 1];
-		        scr_rebuild_chips_for_target(bet_target, "ANTE", obj_game.ante, denomsAnte);
+		        scr_rebuild_chips_for_target(bet_target, targetName, obj_game.ante, denoms);
 		    }
 		}
 		if(targetName = "BONUS") 
 		{
 			obj_game.bonus += chip_value;
 			bet_target = drop_target;
+			if (!obj_game.is_rebuilding)
+		    {
+		        scr_rebuild_chips_for_target(bet_target, targetName, obj_game.bonus, denoms);
+		    }
 		}
 
 		obj_game.player_total_bet = obj_game.ante + obj_game.bonus;

@@ -9,7 +9,10 @@
     "name":"Betting",
     "path":"folders/Objects/Betting.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_bet",
+    "path":"objects/obj_bet/obj_bet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_chip_fifty",
+    "path":"sprites/spr_chip_fifty/spr_chip_fifty.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

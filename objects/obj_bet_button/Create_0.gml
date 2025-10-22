@@ -31,6 +31,28 @@ show_debug_message("chip denoms:" + string (change.denoms));
 	show_debug_message( string(obj_game.ante) + " " + string(obj_game.bonus) + " " + string(obj_game.flop) + " " + string(obj_game.turn) + " " + string(obj_game.river));
 	//There will be a game object which will be tracking the Ante and Bonus Bet amounts
 	//Check the object to determine how much 2x the ante is for the Flop Bet or 1x if the bet is for the turn or river
+	var denoms = [100, 25, 5, 1];
+	switch(obj_game.hand_stage) {
+		case "FLOP":
+			if (!obj_game.is_rebuilding)
+		    {
+		        scr_rebuild_chips_for_target(obj_flop, "FLOP", obj_game.flop, denoms);
+		    }
+		break;
+		case "TURN":
+		if (!obj_game.is_rebuilding)
+		    {
+		        scr_rebuild_chips_for_target(obj_turn, "TURN", obj_game.turn, denoms);
+		    }
+		break;
+		case "RIVER":
+		if (!obj_game.is_rebuilding)
+		    {
+		        scr_rebuild_chips_for_target(obj_river, "RIVER", obj_game.river, denoms);
+		    }
+		break;
+	}
+			
 };
 
 
