@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_check_button",
+  "%Name":"obj_chip_bank",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_check_button",
+  "name":"obj_chip_bank",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Objects/Buttons.yy",
+    "name":"Betting",
+    "path":"folders/Objects/Betting.yy",
   },
   "parentObjectId":{
-    "name":"obj_button",
-    "path":"objects/obj_button/obj_button.yy",
+    "name":"obj_text",
+    "path":"objects/obj_text/obj_text.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_check_button_2",
-    "path":"sprites/spr_check_button_2/spr_check_button_2.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

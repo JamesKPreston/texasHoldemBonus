@@ -1,33 +1,32 @@
 // Inherit the parent event
 event_inherited();
-
+button_id = "BET";
 // Optional: assign a callback to run on click
 on_click = function () {
     // Replace with your action
     show_debug_message("BET Button clicked!");
+	scr_game_stage();
 	
-	switch(obj_game.hand_stage) {
-		case "PREFLOP":
-			obj_game.hand_stage = "FLOP";
-			obj_game.flop =  obj_game.ante * 2;
-		break;
-		case "FLOP":
-			//obj_game.player_total_bet += obj_game.ante;
-			obj_game.turn += obj_game.ante;
-			obj_game.hand_stage = "TURN";
-			break;
-		case "TURN":
-			//obj_game.player_total_bet += obj_game.ante;
-			obj_game.river += obj_game.ante;
-			obj_game.hand_stage = "RIVER";
-		case "River":
-			//	obj_game.player_total_bet += obj_game.ante;
-			//obj_game.hand_stage = "FLOP";
-			break;
-			
-	}
-
+	
 	obj_game.player_total_bet = obj_game.ante + obj_game.bonus + obj_game.flop + obj_game.turn + obj_game.river;
+	obj_chip_bank.text_value = obj_game.player_total_bet;
+	obj_chip_bank.text_description = string(obj_game.player_total_bet);
+	
+	var denomsAnte = [100,25,5,1]
+	var change = chips_for_amount(obj_game.ante, denomsAnte);
+	
+show_debug_message("chip counts:" + string (change.counts));
+show_debug_message("chip denoms:" + string (change.denoms));
+	 //change.denoms  = [100,25,5,1]
+	 //change.counts  = [0, 3, 1, 0]   // 3×25 + 1×5
+	 //change.remaining = 0
+	 //change.total_chips = 4
+
+	
+	show_debug_message("Chip Counts 1s : " + string(obj_game.ante_chip_count_1s));
+	show_debug_message("Chip Counts 5s : " + string(obj_game.ante_chip_count_5s));
+	show_debug_message("Chip Counts 25s : " + string(obj_game.ante_chip_count_25s));
+	show_debug_message("Chip Counts 100s : " + string(obj_game.ante_chip_count_100s));
 	show_debug_message("Current Total Bet " + string(obj_game.player_total_bet) );
 	show_debug_message( string(obj_game.ante) + " " + string(obj_game.bonus) + " " + string(obj_game.flop) + " " + string(obj_game.turn) + " " + string(obj_game.river));
 	//There will be a game object which will be tracking the Ante and Bonus Bet amounts

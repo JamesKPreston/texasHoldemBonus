@@ -16,3 +16,4 @@
 			draw_sprite_ext(card_sprite, -1,  deck_x + deck_buffer_x *i, deck_y - deck_buffer_y *i, scale_x, scale_y, image_angle, image_blend, image_alpha);
 		}
 	}
+

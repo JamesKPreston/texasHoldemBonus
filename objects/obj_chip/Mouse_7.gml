@@ -30,13 +30,27 @@ if (is_dragging) {
 		if(targetName = "ANTE")
 		{
 			obj_game.ante += chip_value;
+
+		    // mark this chip as belonging to this target so it can be managed
+		    bet_target = obj_ante;
+		    targetName = "ANTE";
+
+		    if (!obj_game.is_rebuilding)
+		    {
+		        // Rebuild if a fewer-chip representation exists
+		        var denomsAnte = [100, 25, 5, 1];
+		        scr_rebuild_chips_for_target(bet_target, "ANTE", obj_game.ante, denomsAnte);
+		    }
 		}
 		if(targetName = "BONUS") 
 		{
 			obj_game.bonus += chip_value;
+			bet_target = drop_target;
 		}
 
 		obj_game.player_total_bet = obj_game.ante + obj_game.bonus;
+		obj_chip_bank.text_value = obj_game.player_total_bet;
+		obj_chip_bank.text_description = string(obj_game.player_total_bet);
 		show_debug_message("Ante : " + string(obj_game.ante) );
 		show_debug_message("Total : " + string(obj_game.player_total_bet ) );
 

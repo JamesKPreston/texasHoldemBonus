@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_rebuild_chips_for_target",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_rebuild_chips_for_target",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
