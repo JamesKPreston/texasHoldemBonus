@@ -13,7 +13,6 @@ function scr_game_stage(){
 				}
 			break;
 			case "FLOP":
-				//obj_game.player_total_bet += obj_game.ante;
 				if(button_id == "BET")
 				{
 					obj_game.turn += obj_game.ante;
@@ -26,7 +25,7 @@ function scr_game_stage(){
 				//obj_game.player_total_bet += obj_game.ante;
 				if(button_id == "BET")
 				{
-						obj_game.river += obj_game.ante;
+					obj_game.river += obj_game.ante;
 				}
 			
 				obj_game.hand_stage = "RIVER";	
