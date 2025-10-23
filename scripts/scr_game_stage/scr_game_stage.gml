@@ -13,7 +13,6 @@ function scr_game_stage(){
 				}
 			break;
 			case "FLOP":
-				//obj_game.player_total_bet += obj_game.ante;
 				if(button_id == "BET")
 				{
 					obj_game.turn += obj_game.ante;
@@ -26,7 +25,7 @@ function scr_game_stage(){
 				//obj_game.player_total_bet += obj_game.ante;
 				if(button_id == "BET")
 				{
-						obj_game.river += obj_game.ante;
+					obj_game.river += obj_game.ante;
 				}
 			
 				obj_game.hand_stage = "RIVER";	
@@ -72,11 +71,9 @@ function scr_game_stage(){
 						community[i + 4] = scr_card_struct_from_index(hand[i]);
 					}
 				}
-			
 				// Run showdown
 				var out = poker_showdown(playerHand, dealerHand, community);
 				show_debug_message(out.message);
-
 				// If you need to branch on winner:
 				//if (out.result > 0) {
 				//    // Hero wins
@@ -88,5 +85,6 @@ function scr_game_stage(){
 				break;
 			
 		}
+
 
 }
