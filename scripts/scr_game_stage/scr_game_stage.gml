@@ -71,11 +71,9 @@ function scr_game_stage(){
 						community[i + 4] = scr_card_struct_from_index(hand[i]);
 					}
 				}
-			
 				// Run showdown
 				var out = poker_showdown(playerHand, dealerHand, community);
 				show_debug_message(out.message);
-
 				// If you need to branch on winner:
 				//if (out.result > 0) {
 				//    // Hero wins
@@ -87,5 +85,6 @@ function scr_game_stage(){
 				break;
 			
 		}
+
 
 }

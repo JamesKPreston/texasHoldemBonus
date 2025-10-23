@@ -12,3 +12,5 @@ drag_front_depth = -1000000; // super front during drag
 targetName = "ANTE";
 bet_target = obj_bet;
 // If you want it even tighter, delete the items with 2s, or set a scale < 1 (see below).
+
+disabled = false;

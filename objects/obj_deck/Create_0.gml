@@ -23,15 +23,7 @@ river_hand = obj_hand_river;
 stage = 0;
 
 
-scr_init_sprite_array();
-
-deckPoint = 0;
-deckCount = 52;
-for(i = 0; i < 52; i ++) {
-	deck[i] = i;
-}
-
-
+scr_init_deck();
 
 
 

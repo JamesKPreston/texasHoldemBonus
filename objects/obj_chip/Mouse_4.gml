@@ -1,3 +1,4 @@
+if(disabled) return;
 // Start dragging this chip
 is_dragging = true;
 

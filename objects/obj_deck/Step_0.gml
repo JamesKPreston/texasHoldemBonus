@@ -90,5 +90,5 @@ if(keyboard_check_released(vk_tab)) {
 
 if(keyboard_check_released(vk_escape))
 {
-	game_restart();
+	scr_reset_hand();
 }
