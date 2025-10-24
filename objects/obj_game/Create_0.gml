@@ -9,7 +9,8 @@ flop = 0;
 turn = 0;
 river = 0;
 is_rebuilding = false;
-
+is_player_winner = false;
+player_hand_rank = 0;
 
 bonus_payout = 0;
 ante_payout = 0;

@@ -6,7 +6,6 @@ on_click = function () {
 		sprite_index = spr_bet_button_2;
 		scr_deal_button();
 		button_id = "BET";
-		obj_game.player_total_bank -= obj_game.player_total_bet;
 	} 
 	else {
 		scr_bet_button();

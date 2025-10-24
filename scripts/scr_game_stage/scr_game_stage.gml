@@ -74,17 +74,20 @@ function scr_game_stage(){
 				}
 				// Run showdown
 				var out = poker_showdown(playerHand, dealerHand, community);
+				obj_game.player_hand_rank = out.hero.category;
 				show_debug_message(out.message);
-				// If you need to branch on winner:
-				//if (out.result > 0) {
-				//    // Hero wins5
-				//} else if (out.result < 0) {
-				//    // Dealer wins
-				//} else {
-				//    // Split pot
-				//}
+				 
+				if (out.result > 0) {
+				    obj_game.is_player_winner = true;
+				} else if (out.result < 0) {
+				    // Dealer wins
+					obj_game.is_player_winner = false;
+				} else {
+				    // Split pot
+				}
+				  scr_payout();
 				break;
-			
+			 
 		}
 
 
