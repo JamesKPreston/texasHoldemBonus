@@ -3,8 +3,8 @@
   "%Name":"poker_evaluator_directions",
   "name":"poker_evaluator_directions",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Poker",
+    "path":"folders/Scripts/Helpers/Poker.yy",
   },
   "resourceType":"GMNotes",
   "resourceVersion":"2.0",

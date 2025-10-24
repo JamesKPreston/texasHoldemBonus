@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_deal_game",
+  "%Name":"scr_deal_button",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_deal_game",
+  "name":"scr_deal_button",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Buttons",
+    "path":"folders/Scripts/Helpers/Buttons.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

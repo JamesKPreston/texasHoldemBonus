@@ -32,8 +32,9 @@ function scr_game_stage(){
 				with(river) { face_up = true;  scr_flip_card(); }
 				break;
 			case "RIVER":
+				obj_game.hand_stage = "SHOWDOWN";	
 				with(dealer) { face_up = true; scr_flip_card(); }
-						var playerHand = [];
+				var playerHand = [];
 				var community = [];
 				var dealerHand = [];
 
@@ -76,7 +77,7 @@ function scr_game_stage(){
 				show_debug_message(out.message);
 				// If you need to branch on winner:
 				//if (out.result > 0) {
-				//    // Hero wins
+				//    // Hero wins5
 				//} else if (out.result < 0) {
 				//    // Dealer wins
 				//} else {

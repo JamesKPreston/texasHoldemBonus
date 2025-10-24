@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Turn",
-    "path":"folders/Objects/Turn.yy",
+    "path":"folders/Objects/Hands/Turn.yy",
   },
   "parentObjectId":{
     "name":"obj_card",

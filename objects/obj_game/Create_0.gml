@@ -1,12 +1,3 @@
-//deckObj = obj_deck;
-//handCount = 0;
-//hand = [];
-//handCard = [];
-//hand_position = 0;
-//cardNum = 0;
-//card_drawn = false;
-//handType = "DEALER";
-//maxHand = 2;
 
 if (instance_number(obj_game) > 1) { // prevent duplicates on room resets
     instance_destroy();
@@ -28,7 +19,7 @@ river_payout = 0;
 
 hand_stage = "PREFLOP";
 player_total_bet = 0;
-player_total_bank = 1001;
+player_total_bank = 1000;
 ante_chip_count_1s = 0;
 ante_chip_count_5s = 0;
 ante_chip_count_25s = 0;

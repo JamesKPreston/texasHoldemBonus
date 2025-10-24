@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_chip_counts",
+  "%Name":"scr_bet_button",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_chip_counts",
+  "name":"scr_bet_button",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Buttons",
+    "path":"folders/Scripts/Helpers/Buttons.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

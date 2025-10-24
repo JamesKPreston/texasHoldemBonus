@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_flip_card",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Cards",
+    "path":"folders/Scripts/Helpers/Cards.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

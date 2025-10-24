@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Dealer",
-    "path":"folders/Objects/Dealer.yy",
+    "path":"folders/Objects/Hands/Dealer.yy",
   },
   "parentObjectId":{
     "name":"obj_hand",
