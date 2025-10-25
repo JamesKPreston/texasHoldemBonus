@@ -37,6 +37,12 @@ function scr_payout() {
 			//scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
 			scr_payout_animation(obj_river_payout,river);
 
+		} 
+		if(obj_game.hand_winner == "DEALER") {
+			scr_destroy_chips_on_target(obj_ante,"ANTE");
+			scr_destroy_chips_on_target(obj_flop,"FLOP");
+			scr_destroy_chips_on_target(obj_turn,"TURN");
+			scr_destroy_chips_on_target(obj_river,"RIVER");
 		}
 	
 		//the player has a pocket pair
@@ -88,6 +94,8 @@ function scr_payout() {
 		//scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);
 		if(bonus_payout > 0) {
 			scr_payout_animation(obj_bonus_payout,bonus_payout - bonus);
+		} else {
+			scr_destroy_chips_on_target(obj_bonus,"BONUS");
 		}
 		player_total_bank += ante_payout + bonus_payout + flop_payout + river_payout + turn_payout;
 

@@ -42,7 +42,7 @@ if (is_dragging) {
 		if(targetName = "BONUS") 
 		{
 			obj_game.bonus += chip_value;
-			bet_target = drop_target;
+			bet_target = obj_bonus;
 			if (!obj_game.is_rebuilding)
 		    {
 		        scr_rebuild_chips_for_target(bet_target, targetName, obj_game.bonus, denoms);
