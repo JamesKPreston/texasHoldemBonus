@@ -1,4 +1,5 @@
 function scr_bet_button(){
+
 	scr_game_stage();
 		
 	obj_game.player_total_bet = obj_game.ante + obj_game.bonus + obj_game.flop + obj_game.turn + obj_game.river;
@@ -27,13 +28,14 @@ function scr_bet_button(){
 			{
 			    scr_rebuild_chips_for_target(obj_river, "RIVER", obj_game.river, denoms);
 			}
+			scr_game_stage();
 		break;
 		case "SHOWDOWN":
 			//calculate payouts
 			//display winner
 			//small delay
 			//reset
-			scr_reset_hand();
+			//scr_reset_hand();
 			break;
 	}
 }

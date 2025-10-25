@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_poker_determine_winner",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_poker_determine_winner",
+  "parent":{
+    "name":"Poker",
+    "path":"folders/Scripts/Helpers/Poker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

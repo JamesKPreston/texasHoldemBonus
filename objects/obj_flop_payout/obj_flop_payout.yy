@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fold_button",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_flop_payout",
+  "eventList":[],
   "managed":true,
-  "name":"obj_fold_button",
+  "name":"obj_flop_payout",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Objects/Buttons.yy",
+    "name":"Betting",
+    "path":"folders/Objects/Betting.yy",
   },
   "parentObjectId":{
-    "name":"obj_button",
-    "path":"objects/obj_button/obj_button.yy",
+    "name":"obj_bet",
+    "path":"objects/obj_bet/obj_bet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fold_button_2",
-    "path":"sprites/spr_fold_button_2/spr_fold_button_2.yy",
+    "name":"spr_chip_five_hundred",
+    "path":"sprites/spr_chip_five_hundred/spr_chip_five_hundred.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -1500,7 +1500,10 @@
   "sdfSpread":2,
   "size":40.0,
   "styleName":"Regular",
-  "textureGroupId":null,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
   "TTFName":"C:\\Users\\James\\source\\texasHoldemBonus\\fonts\\fnt_poker\\Poker.ttf",
   "usesSDF":true,
 }
