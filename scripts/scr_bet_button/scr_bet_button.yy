@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_bet_button",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_bet_button",
+  "parent":{
+    "name":"Buttons",
+    "path":"folders/Scripts/Helpers/Buttons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

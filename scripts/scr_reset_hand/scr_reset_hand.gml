@@ -21,6 +21,8 @@ function scr_reset_hand(){
 		ante_chip_count_5s = 0;
 		ante_chip_count_25s = 0;
 		ante_chip_count_100s = 0;
+		alarm[ALRM.WINNER] = -1;
+
 	}
 	obj_bet_button.button_id = "DEAL";
 	obj_bet_button.sprite_index = spr_deal_button;

@@ -18,9 +18,9 @@ function poker_showdown(hero2, dealer2, board5) {
     var cmp = __poker_compare(he.tiebreak, de.tiebreak);
     var msg;
     if (cmp > 0) {
-        msg = "Hero wins with " + he.label + " vs Dealer's " + de.label;
+        msg = "Player wins with " + he.label + " vs Dealer's " + de.label;
     } else if (cmp < 0) {
-        msg = "Dealer wins with " + de.label + " vs Hero's " + he.label;
+        msg = "Dealer wins with " + de.label + " vs Player's " + he.label;
     } else {
         msg = "Tie: both have " + he.label;
     }

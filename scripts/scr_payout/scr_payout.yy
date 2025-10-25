@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_deal_game",
+  "%Name":"scr_payout",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_deal_game",
+  "name":"scr_payout",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Payout",
+    "path":"folders/Scripts/Helpers/Payout.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

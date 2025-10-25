@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_poker_evaluator",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Poker",
+    "path":"folders/Scripts/Helpers/Poker.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

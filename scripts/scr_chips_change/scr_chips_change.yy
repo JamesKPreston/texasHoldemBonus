@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_chips_change",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Chips",
+    "path":"folders/Scripts/Helpers/Chips.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

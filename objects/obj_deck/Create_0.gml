@@ -1,4 +1,3 @@
-//511 270
 deck_x = 324;
 deck_y = 270;
 card_width = 90;
@@ -24,11 +23,5 @@ stage = 0;
 
 
 scr_init_deck();
-
-
-
-
-
-//#macro CARDMAX i
 
 scr_shuffle_deck();

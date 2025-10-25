@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Flop",
-    "path":"folders/Objects/Flop.yy",
+    "path":"folders/Objects/Hands/Flop.yy",
   },
   "parentObjectId":{
     "name":"obj_hand",

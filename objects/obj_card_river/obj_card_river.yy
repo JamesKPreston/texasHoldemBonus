@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"River",
-    "path":"folders/Objects/River.yy",
+    "path":"folders/Objects/Hands/River.yy",
   },
   "parentObjectId":{
     "name":"obj_card",

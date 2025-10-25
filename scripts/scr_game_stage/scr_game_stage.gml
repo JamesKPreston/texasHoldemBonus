@@ -32,59 +32,12 @@ function scr_game_stage(){
 				with(river) { face_up = true;  scr_flip_card(); }
 				break;
 			case "RIVER":
+				obj_game.hand_stage = "SHOWDOWN";	
 				with(dealer) { face_up = true; scr_flip_card(); }
-						var playerHand = [];
-				var community = [];
-				var dealerHand = [];
-
-				with(player_hand) {
-					for(i =0; i < 2; i ++) 
-					{
-						playerHand[i] = scr_card_struct_from_index(hand[i]);
-					}
-				}
-			
-				with(dealer_hand) {
-					for(i =0; i < 2; i ++) 
-					{
-						dealerHand[i] = scr_card_struct_from_index(hand[i]);
-					}
-				}
-			
-				with(flop_hand) {
-					for(i =0; i < 3; i ++) 
-					{
-						community[i] = scr_card_struct_from_index(hand[i]);
-					}
-				}
-			
-				with(turn_hand) {
-					for(i =0; i < 1; i ++) 
-					{
-						community[i + 3] = scr_card_struct_from_index(hand[i]);
-					}
-				}
-			
-				with(river_hand) {
-					for(i =0; i < 1; i ++) 
-					{
-						community[i + 4] = scr_card_struct_from_index(hand[i]);
-					}
-				}
-				// Run showdown
-				var out = poker_showdown(playerHand, dealerHand, community);
-				show_debug_message(out.message);
-				// If you need to branch on winner:
-				//if (out.result > 0) {
-				//    // Hero wins
-				//} else if (out.result < 0) {
-				//    // Dealer wins
-				//} else {
-				//    // Split pot
-				//}
+				scr_poker_determine_winner();
 				break;
-			
+			case "SHOWDOWN":
+				
+			break;
 		}
-
-
 }
