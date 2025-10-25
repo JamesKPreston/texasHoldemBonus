@@ -29,6 +29,7 @@ function scr_bet_button(){
 			    scr_rebuild_chips_for_target(obj_river, "RIVER", obj_game.river, denoms);
 			}
 			scr_game_stage();
+			
 		break;
 		case "SHOWDOWN":
 			//calculate payouts

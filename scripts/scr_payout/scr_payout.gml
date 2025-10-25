@@ -1,4 +1,5 @@
 function scr_payout() {
+	var debug = false;
 	var playerHand = [];
 	var dealerHand = [];
 	with(player_hand) {
@@ -17,22 +18,24 @@ function scr_payout() {
 	with(obj_game) 
 	{
 		//Did Player Win ?
-		if(obj_game.hand_winner == "PLAYER") {
-			if(obj_game.player_hand_rank >= 4) {
+		if(obj_game.hand_winner == "PLAYER" || debug) {
+			if(obj_game.player_hand_rank >= 4 || debug) {
 				ante_payout = ante * 2;
-				scr_rebuild_chips_for_target(obj_ante_payout, "ANTE", ante, [100, 25, 5, 1]);
+				scr_payout_animation(obj_ante_payout,ante);
+		
 			} else {
 				ante_payout = ante;
 			}
 		
-			
-	
 			flop_payout = flop * 2;
-			scr_rebuild_chips_for_target(obj_flop_payout, "FLOP", flop, [100, 25, 5, 1]);
+			scr_payout_animation(obj_flop_payout,flop);
+			//scr_rebuild_chips_for_target(obj_flop_payout, "FLOP", flop, [100, 25, 5, 1]);
 			turn_payout = turn * 2;
-			scr_rebuild_chips_for_target(obj_turn_payout, "TURN", turn, [100, 25, 5, 1]);
+			scr_payout_animation(obj_turn_payout,turn);
+			//scr_rebuild_chips_for_target(obj_turn_payout, "TURN", turn, [100, 25, 5, 1]);
 			river_payout = river * 2;
-			scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
+			//scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
+			scr_payout_animation(obj_river_payout,river);
 
 		}
 	
@@ -82,7 +85,10 @@ function scr_payout() {
 					}
 				}
 		}
-		scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);	
+		//scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);
+		if(bonus_payout > 0) {
+			scr_payout_animation(obj_bonus_payout,bonus_payout - bonus);
+		}
 		player_total_bank += ante_payout + bonus_payout + flop_payout + river_payout + turn_payout;
 
 		//BONUS PAYOUT:
