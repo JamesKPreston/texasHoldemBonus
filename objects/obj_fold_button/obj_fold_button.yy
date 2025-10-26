@@ -37,5 +37,5 @@
     "path":"sprites/spr_fold_button_2/spr_fold_button_2.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
