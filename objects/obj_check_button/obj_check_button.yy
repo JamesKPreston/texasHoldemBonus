@@ -37,5 +37,5 @@
     "path":"sprites/spr_check_button_2/spr_check_button_2.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

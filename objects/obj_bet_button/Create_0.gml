@@ -8,6 +8,7 @@ on_click = function () {
 		sprite_index = spr_bet_button_2;
 		scr_deal_button();
 		button_id = "BET";
+		with(obj_check_button) visible = true;
 	} 
 	else {
 		scr_bet_button();
