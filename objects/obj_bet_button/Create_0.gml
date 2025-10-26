@@ -9,6 +9,7 @@ on_click = function () {
 		scr_deal_button();
 		button_id = "BET";
 		with(obj_check_button) visible = true;
+		with(obj_fold_button) visible = true;
 	} 
 	else {
 		scr_bet_button();
