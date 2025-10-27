@@ -7,3 +7,4 @@ cardNum = 0;
 card_drawn = false;
 handType = "DEALER";
 maxHand = 2;
+best5 = [];

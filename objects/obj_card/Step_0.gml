@@ -16,3 +16,10 @@ if(card_in_hand) {
 	}
 }
 
+if (keyboard_check_pressed(ord("H")) && position_meeting(mouse_x, mouse_y, id)) {
+    is_winning = true;
+    if (is_community) target_y_offset = 6;
+}
+
+y_offset        = lerp(y_offset, target_y_offset, 0.20);
+highlight_alpha = lerp(highlight_alpha, is_winning ? 0.40 : 0.0, 0.25);

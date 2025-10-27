@@ -4,7 +4,7 @@ function scr_card_struct_from_index(idx) {
     var suit = floor(zero_based / 13);      // 0..3
     var rank = (zero_based mod 13) + 1;     // 1..13 → map Ace=14 later if needed
     if (rank == 1) rank = 14;               // make Ace high
-    return { rank: rank, suit: suit };
+    return { rank: rank, suit: suit, id: idx };
 }
 
 

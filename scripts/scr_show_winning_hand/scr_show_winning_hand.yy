@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_show_winning_hand",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_show_winning_hand",
+  "parent":{
+    "name":"Cards",
+    "path":"folders/Scripts/Helpers/Cards.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

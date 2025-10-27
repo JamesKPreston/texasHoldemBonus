@@ -19,5 +19,11 @@ card_width = 90;
 card_height = 129;
 selected = false;
 face_up = true;
+is_winning       = false;
+is_community     = false;
+
+y_offset         = 0;
+target_y_offset  = 0;
+highlight_alpha  = 0;
 
 

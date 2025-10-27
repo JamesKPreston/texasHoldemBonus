@@ -46,12 +46,21 @@ function scr_poker_determine_winner(){
 	}			 
 	if (out.result > 0) {
 		obj_game.hand_winner = "PLAYER";
+		obj_hand_player.best5 = out.hero.best5;
+		obj_hand_flop.best5 = out.hero.best5;
+		obj_hand_turn.best5 = out.hero.best5;
+		obj_hand_river.best5 = out.hero.best5;
 	} else if (out.result < 0) {
 		// Dealer wins
 		obj_game.hand_winner = "DEALER";
+		obj_hand_dealer.best5 = out.dealer.best5;
+		obj_hand_flop.best5 = out.dealer.best5;
+		obj_hand_turn.best5 = out.dealer.best5;
+		obj_hand_river.best5 = out.dealer.best5;
 	} else {
 		// Split pot
 		obj_game.hand_winner = "TIE";
 	}
 	scr_payout();
+	scr_show_winning_hand();
 }
