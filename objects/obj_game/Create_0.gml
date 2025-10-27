@@ -37,6 +37,7 @@ winner_seconds = 0;
 
 /// helper to start the timer (seconds -> steps)
 function showWinner(_text, _seconds, _color) {
+	
     winner_text   = _text;
 	obj_test.text_description = winner_text;
     winner_color  = is_undefined(_color) ? c_yellow : _color;

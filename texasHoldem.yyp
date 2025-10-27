@@ -61,6 +61,7 @@
   },
   "name":"texasHoldem",
   "resources":[
+    {"id":{"name":"fnt_poker_1","path":"fonts/fnt_poker_1/fnt_poker_1.yy",},},
     {"id":{"name":"fnt_poker","path":"fonts/fnt_poker/fnt_poker.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"poker_evaluator_directions","path":"notes/poker_evaluator_directions/poker_evaluator_directions.yy",},},
@@ -124,6 +125,7 @@
     {"id":{"name":"scr_position_chip_on_target","path":"scripts/scr_position_chip_on_target/scr_position_chip_on_target.yy",},},
     {"id":{"name":"scr_rebuild_chips_for_target","path":"scripts/scr_rebuild_chips_for_target/scr_rebuild_chips_for_target.yy",},},
     {"id":{"name":"scr_reset_hand","path":"scripts/scr_reset_hand/scr_reset_hand.yy",},},
+    {"id":{"name":"scr_show_winning_hand","path":"scripts/scr_show_winning_hand/scr_show_winning_hand.yy",},},
     {"id":{"name":"scr_shuffle_deck","path":"scripts/scr_shuffle_deck/scr_shuffle_deck.yy",},},
     {"id":{"name":"scr_sprite_for_chip_value","path":"scripts/scr_sprite_for_chip_value/scr_sprite_for_chip_value.yy",},},
     {"id":{"name":"spr_bar","path":"sprites/spr_bar/spr_bar.yy",},},

@@ -11,7 +11,7 @@ if (show_winner) {
 
     // winner banner
     var msg = winner_text;
-    var pad = 24;
+    var pad = 12;
     var tw  = string_width(msg) + pad * 2;
     var th  = string_height(msg) + pad * 2;
     x   = (w - tw) * 0.5;
