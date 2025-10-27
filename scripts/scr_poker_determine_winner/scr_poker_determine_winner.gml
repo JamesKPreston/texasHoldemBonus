@@ -42,7 +42,7 @@ function scr_poker_determine_winner(){
 	obj_game.player_hand_rank = out.hero.category;
 	show_debug_message(out.message);
 	with (obj_game) {
-		showWinner(out.message, 25, c_yellow); // 1.5 seconds
+		showWinner(out.message, 10, c_yellow); // 1.5 seconds
 	}			 
 	if (out.result > 0) {
 		obj_game.hand_winner = "PLAYER";
