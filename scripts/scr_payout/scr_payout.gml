@@ -2,19 +2,24 @@ function scr_payout() {
 	var debug = false;
 	var playerHand = [];
 	var dealerHand = [];
-	with(player_hand) {
-		for(i =0; i < 2; i ++) 
-		{
-			playerHand[i] = scr_card_struct_from_index(hand[i]);
+	with(obj_deck)
+	{
+		with(player_hand) {
+			for(i =0; i < 2; i ++) 
+			{
+				playerHand[i] = Poker.CardStructFromIndex(hand[i]);
+			}
 		}
-	}
 			
-	with(dealer_hand) {
-		for(i =0; i < 2; i ++) 
-		{
-			dealerHand[i] = scr_card_struct_from_index(hand[i]);
+		with(dealer_hand) {
+			for(i =0; i < 2; i ++) 
+			{
+				dealerHand[i] = Poker.CardStructFromIndex(hand[i]);
+			}
 		}
+	
 	}
+
 	with(obj_game) 
 	{
 		//Did Player Win ?

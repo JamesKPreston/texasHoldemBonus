@@ -34,6 +34,8 @@
     {"name":"inst_303921C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_53CFF10D","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_695C3328","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_64142AAD","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_1C8BE408","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -67,6 +69,8 @@
         {"$GMRInstance":"v2","%Name":"inst_303921C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_303921C","objectId":{"name":"obj_river_payout","path":"objects/obj_river_payout/obj_river_payout.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.3486591,"scaleY":0.3314827,"x":469.32568,"y":444.91278,},
         {"$GMRInstance":"v2","%Name":"inst_53CFF10D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53CFF10D","objectId":{"name":"obj_bonus_payout","path":"objects/obj_bonus_payout/obj_bonus_payout.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.3486591,"scaleY":0.3314827,"x":282.2414,"y":327.99133,},
         {"$GMRInstance":"v2","%Name":"inst_695C3328","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_695C3328","objectId":{"name":"obj_ante_payout","path":"objects/obj_ante_payout/obj_ante_payout.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.3486591,"scaleY":0.3314827,"x":457.24146,"y":607.8343,},
+        {"$GMRInstance":"v2","%Name":"inst_64142AAD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_64142AAD","objectId":{"name":"Poker","path":"objects/Poker/Poker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":608.0,},
+        {"$GMRInstance":"v2","%Name":"inst_1C8BE408","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1C8BE408","objectId":{"name":"PokerEvaluator","path":"objects/PokerEvaluator/PokerEvaluator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1248.0,"y":576.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_54F7529C","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_54F7529C","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.7673936,"scaleY":0.65122616,"spriteId":{"name":"spr_table_blue","path":"sprites/spr_table_blue/spr_table_blue.yy",},"x":768.0,"y":480.0,},

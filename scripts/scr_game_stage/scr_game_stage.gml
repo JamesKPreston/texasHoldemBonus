@@ -34,7 +34,7 @@ function scr_game_stage(){
 			case "RIVER":
 				obj_game.hand_stage = "SHOWDOWN";	
 				with(dealer) { face_up = true; scr_flip_card(); }
-				scr_poker_determine_winner();
+				Poker.Determine_winner();
 				break;
 			case "SHOWDOWN":
 				
