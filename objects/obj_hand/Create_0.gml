@@ -1,4 +1,4 @@
-deckObj = obj_deck;
+deckObj = Deck;
 handCount = 0;
 hand = [];
 handCard = [];

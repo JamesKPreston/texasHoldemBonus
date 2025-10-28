@@ -8,8 +8,8 @@
   "name":"Poker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Classes",
-    "path":"folders/Objects/Classes.yy",
+    "name":"Poker",
+    "path":"folders/Objects/Classes/Poker.yy",
   },
   "parentObjectId":null,
   "persistent":false,

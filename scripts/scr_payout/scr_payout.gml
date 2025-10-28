@@ -2,7 +2,7 @@ function scr_payout() {
 	var debug = false;
 	var playerHand = [];
 	var dealerHand = [];
-	with(obj_deck)
+	with(Deck)
 	{
 		with(player_hand) {
 			for(i =0; i < 2; i ++) 

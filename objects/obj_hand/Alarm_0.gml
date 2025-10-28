@@ -1,4 +1,4 @@
 if(handCount < maxHand) {
-	scr_draw(1);
+	Deck.Draw(1,self);
 	alarm[0] = 5
 }

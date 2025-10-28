@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"PokerEvaluator",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Card",
+  "eventList":[],
   "managed":true,
-  "name":"PokerEvaluator",
+  "name":"Card",
   "overriddenProperties":[],
   "parent":{
-    "name":"Poker",
-    "path":"folders/Objects/Classes/Poker.yy",
+    "name":"Cards",
+    "path":"folders/Objects/Classes/Cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,
