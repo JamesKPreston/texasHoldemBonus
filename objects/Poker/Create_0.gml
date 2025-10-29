@@ -27,13 +27,16 @@ function CardNameFromIndex(idx) {
 }
 
 
-
-function Determine_winner(){
+/// @function Determine_winner(deck_obj, gameObj)
+/// @param {obj_deck} deck_obj - Deck object
+/// @param {obj_game} gameObj - Game Object
+/// @returns nothing for now
+function Determine_winner(deck_obj, gameObj){
 	var playerHand = [];
 	var community = [];
 	var dealerHand = [];
 
-	with(Deck) {
+	with(deck_obj) {
 		with(player_hand) {
 			for(i =0; i < 2; i ++) 
 			{
@@ -68,33 +71,35 @@ function Determine_winner(){
 				community[i + 4] = CardStructFromIndex(hand[i]);
 			}
 		}
+		
+		var out = PokerEvaluator.poker_showdown(playerHand, dealerHand, community);
+	
+		show_debug_message(out.message);
+		with (gameObj) {
+			player_hand_rank = out.hero.category;
+			showWinner(out.message, 10, c_yellow); // 1.5 seconds
+			if (out.result > 0) {
+				hand_winner = "PLAYER";
+				deck_obj.player_hand.best5 = out.hero.best5;
+				deck_obj.flop_hand.best5 = out.hero.best5;
+				deck_obj.turn_hand.best5 = out.hero.best5;
+				deck_obj.river_hand.best5 = out.hero.best5;
+			} else if (out.result < 0) {
+				// Dealer wins
+				hand_winner = "DEALER";
+				deck_obj.dealer_hand.best5 = out.dealer.best5;
+				deck_obj.flop_hand.best5 = out.hero.best5;
+				deck_obj.turn_hand.best5 = out.hero.best5;
+				deck_obj.river_hand.best5 = out.hero.best5;
+			} else {
+				// Split pot
+				hand_winner = "TIE";
+			}
+		}
 	}
 
 	// Run showdown
-	
-	var out = PokerEvaluator.poker_showdown(playerHand, dealerHand, community);
-	obj_game.player_hand_rank = out.hero.category;
-	show_debug_message(out.message);
-	with (obj_game) {
-		showWinner(out.message, 10, c_yellow); // 1.5 seconds
-	}			 
-	if (out.result > 0) {
-		obj_game.hand_winner = "PLAYER";
-		obj_hand_player.best5 = out.hero.best5;
-		obj_hand_flop.best5 = out.hero.best5;
-		obj_hand_turn.best5 = out.hero.best5;
-		obj_hand_river.best5 = out.hero.best5;
-	} else if (out.result < 0) {
-		// Dealer wins
-		obj_game.hand_winner = "DEALER";
-		obj_hand_dealer.best5 = out.dealer.best5;
-		obj_hand_flop.best5 = out.dealer.best5;
-		obj_hand_turn.best5 = out.dealer.best5;
-		obj_hand_river.best5 = out.dealer.best5;
-	} else {
-		// Split pot
-		obj_game.hand_winner = "TIE";
-	}
+
 	scr_payout();
 	scr_show_winning_hand();
 }

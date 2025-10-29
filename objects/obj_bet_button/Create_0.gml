@@ -25,7 +25,7 @@ on_click = function () {
 
 function bet_button_click(){
 
-	scr_game_stage();
+	obj_game.scr_game_stage("BET");
 		
 	obj_game.player_total_bet = obj_game.ante + obj_game.bonus + obj_game.flop + obj_game.turn + obj_game.river;
 	obj_chip_bank.text_value = obj_game.player_total_bet;
@@ -53,7 +53,7 @@ function bet_button_click(){
 			{
 			    scr_rebuild_chips_for_target(obj_river, "RIVER", obj_game.river, denoms);
 			}
-			scr_game_stage();
+			obj_game.scr_game_stage("BET");
 			
 		break;
 		case "SHOWDOWN":

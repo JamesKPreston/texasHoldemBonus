@@ -39,11 +39,54 @@ winner_seconds = 0;
 function showWinner(_text, _seconds, _color) {
 	
     winner_text   = _text;
-	obj_test.text_description = winner_text;
+	obj_winner_text.text_description = winner_text;
     winner_color  = is_undefined(_color) ? c_yellow : _color;
     
     winner_seconds = _seconds;
     show_winner   = true;
     var steps_per_second = game_get_speed(gamespeed_fps);
 	alarm[ALRM.WINNER] = max(1, round(_seconds * steps_per_second));
+}
+
+function scr_game_stage(button_id){
+	
+	switch(hand_stage) {
+			case "PREFLOP":
+				hand_stage = "FLOP";
+				if(button_id == "BET")
+				{
+					flop =  ante * 2;
+				}
+				with(obj_card_flop) { 
+					face_up = true;
+					scr_flip_card();
+				}
+			break;
+			case "FLOP":
+				if(button_id == "BET")
+				{
+					turn += ante;
+				}
+				
+				hand_stage = "TURN";
+				with(obj_card_turn) { face_up = true; scr_flip_card();}
+				break;
+			case "TURN":
+				if(button_id == "BET")
+				{
+					river += ante;
+				}
+			
+				hand_stage = "RIVER";	
+				with(obj_card_river) { face_up = true;  scr_flip_card(); }
+				break;
+			case "RIVER":
+				hand_stage = "SHOWDOWN";	
+				with(obj_card_dealer) { face_up = true; scr_flip_card(); }
+				Poker.Determine_winner(Deck,self);
+				break;
+			case "SHOWDOWN":
+				
+			break;
+		}
 }
