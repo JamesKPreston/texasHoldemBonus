@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"texasHoldem",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -21,6 +21,7 @@
     {"$GMFolder":"","%Name":"Classes","folderPath":"folders/Objects/Classes.yy","name":"Classes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cards","folderPath":"folders/Objects/Classes/Cards.yy","name":"Cards","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Deck","folderPath":"folders/Objects/Classes/Deck.yy","name":"Deck","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Refactor","folderPath":"folders/Objects/Classes/Refactor.yy","name":"Refactor","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Poker","folderPath":"folders/Objects/Classes/Poker.yy","name":"Poker","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Deck","folderPath":"folders/Objects/Deck.yy","name":"Deck","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hands","folderPath":"folders/Objects/Hands.yy","name":"Hands","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -60,7 +61,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"texasHoldem",
   "resources":[
@@ -68,8 +69,11 @@
     {"id":{"name":"fnt_poker","path":"fonts/fnt_poker/fnt_poker.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"poker_evaluator_directions","path":"notes/poker_evaluator_directions/poker_evaluator_directions.yy",},},
+    {"id":{"name":"Card_2","path":"objects/Card_2/Card_2.yy",},},
     {"id":{"name":"Card","path":"objects/Card/Card.yy",},},
+    {"id":{"name":"Deck_2","path":"objects/Deck_2/Deck_2.yy",},},
     {"id":{"name":"Deck","path":"objects/Deck/Deck.yy",},},
+    {"id":{"name":"Hand_2","path":"objects/Hand_2/Hand_2.yy",},},
     {"id":{"name":"obj_ante_payout","path":"objects/obj_ante_payout/obj_ante_payout.yy",},},
     {"id":{"name":"obj_ante","path":"objects/obj_ante/obj_ante.yy",},},
     {"id":{"name":"obj_bet_button","path":"objects/obj_bet_button/obj_bet_button.yy",},},
@@ -112,6 +116,7 @@
     {"id":{"name":"PokerEvaluator","path":"objects/PokerEvaluator/PokerEvaluator.yy",},},
     {"id":{"name":"deck_draw_path","path":"paths/deck_draw_path/deck_draw_path.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"scr_chips_change","path":"scripts/scr_chips_change/scr_chips_change.yy",},},
     {"id":{"name":"scr_count_chips_on_target","path":"scripts/scr_count_chips_on_target/scr_count_chips_on_target.yy",},},
     {"id":{"name":"scr_destroy_chips_on_target","path":"scripts/scr_destroy_chips_on_target/scr_destroy_chips_on_target.yy",},},
@@ -207,6 +212,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",

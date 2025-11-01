@@ -1,5 +1,5 @@
 {
-  "$GMNotes":"",
+  "$GMNotes":"v1",
   "%Name":"poker_evaluator_directions",
   "name":"poker_evaluator_directions",
   "parent":{

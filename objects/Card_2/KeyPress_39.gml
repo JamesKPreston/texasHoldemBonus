@@ -1,0 +1,2 @@
+Suit = eSUIT.SPADES;
+Face = eFACE.QUEEN;
