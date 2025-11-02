@@ -63,7 +63,7 @@ function progressGame() {
 		
 		if(endIndex != -1) {
 			for(i = startIndex; i <= endIndex; i ++) {
-				Cards[i].FLIP();
+				Cards[i].Flip();
 			}
 		}
 		
@@ -73,7 +73,7 @@ function progressGame() {
 		switch(stage) {
 				case eStage.RIVER:
 				for(i = 0; i <= 1; i ++) {
-					Cards[i].FLIP();
+					Cards[i].Flip();
 				}
 				Poker.Determine_winner();
 			break;

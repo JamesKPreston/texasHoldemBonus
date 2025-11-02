@@ -62,7 +62,7 @@ function DrawCards(numberOfCards) {
 
         // Flip face up and move into view
         with (card) {
-            FLIP();
+            Flip();
 
             // Put it clearly visible and spaced from others
             x = base_x + (k * spacingX);

@@ -32,23 +32,13 @@ function Init(_suit, _rank) {
 }
 
 
-function FLIP() {
+function Flip() {
 	if(ShowBack) {
 		ShowBack = false; 
 	} else {
 		ShowBack = true;
 	}
-	if(ShowBack) {
-		sprite_index = spr_card_back;
-	} else {
-		var spriteString = string_lower("spr_" + suit_names[Suit] + "_" + rank_names[Rank]);
-		var spr = asset_get_index(spriteString);
-		if (spr != -1) {
-		    sprite_index = spr;
-		} else {
-		    show_debug_message("Sprite not found: " + spriteString);
-		}
-	}
+	sprite_index = GetSprite();
 }
 
 function GetSprite() {

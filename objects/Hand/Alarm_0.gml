@@ -10,7 +10,7 @@ if (array_length(Cards) < maxHand) {
 		var _handState = self.handState;
         with (c) {
 			if(_handState == eFACESTATE.FACEDOWN) {
-				FLIP();
+				Flip();
 			}
             scale(90, 129);
         }
