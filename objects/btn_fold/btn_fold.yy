@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fold_button",
+  "%Name":"btn_fold",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_fold_button",
+  "name":"btn_fold",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -34,5 +35,5 @@
     "path":"sprites/spr_fold_button/spr_fold_button.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

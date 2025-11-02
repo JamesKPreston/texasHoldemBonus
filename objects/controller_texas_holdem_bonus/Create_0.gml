@@ -13,7 +13,7 @@ is_rebuilding = false;
 is_player_winner = false;
 hand_winner  = "";
 player_hand_rank = 0;
-
+game_stage = eStage.HOLE;
 bonus_payout = 0;
 ante_payout = 0;
 flop_payout = 0;
@@ -37,6 +37,55 @@ player_total_bank = 1000;
 //	alarm[ALRM.WINNER] = max(1, round(_seconds * steps_per_second));
 //}
 
+	//obj_game.player_total_bet = obj_game.ante + obj_game.bonus + obj_game.flop + obj_game.turn + obj_game.river;
+	//obj_chip_bank.text_value = obj_game.player_total_bet;
+	//obj_chip_bank.text_description = string(obj_game.player_total_bet);
+	
+	//var denoms = [100, 25, 5, 1];
+	//switch(obj_game.hand_stage) {
+	//	case "FLOP":
+	//	obj_game.player_total_bank -= obj_game.flop;
+	//		if (!obj_game.is_rebuilding)
+	//		{
+	//		    scr_rebuild_chips_for_target(obj_flop, "FLOP", obj_game.flop, denoms);
+	//		}
+
+function bet() {
+	
+	player_total_bet = ante + bonus + flop + turn + river;
+	obj_chip_bank.text_value = player_total_bet;
+	obj_chip_bank.text_description = string(player_total_bet);
+	var denoms = [100, 25, 5, 1];
+	switch(game_stage)
+	{
+		case eStage.FLOP:
+			flop =  ante * 2;
+			player_total_bank -= flop;
+			if (!is_rebuilding)
+			{
+				scr_rebuild_chips_for_target(inst_flop, "FLOP", flop, denoms);
+			}
+		break;
+		case eStage.TURN:
+			turn =  ante;
+			player_total_bank -= turn;
+			if (!is_rebuilding)
+			{
+				scr_rebuild_chips_for_target(inst_turn, "TURN", turn, denoms);
+			}
+		break;
+		case eStage.RIVER:
+			river =  ante;
+			player_total_bank -= river;
+			if (!is_rebuilding)
+			{
+				scr_rebuild_chips_for_target(inst_river, "RIVER", river, denoms);
+			}
+		break;
+		
+	}
+}
+
 function progressGame() {
 	with(Hand) {
 	var startIndex = 0;
@@ -44,17 +93,20 @@ function progressGame() {
 	if(handType == "Community") {
 		switch(stage) {
 			case eStage.HOLE:
+				//Add Bet of 2x the Ante to the Flop bet position
 				//show the flop
 				startIndex = 0;
 				endIndex = 2;
-				//stage = eStage.FLOP;
+				controller_texas_holdem_bonus.game_stage = eStage.FLOP;
 				break;
 			case eStage.FLOP:
+				controller_texas_holdem_bonus.game_stage = eStage.TURN
 				//show the turn
 				startIndex = 3;
 				endIndex = 3;
 				break;
 			case eStage.TURN:
+				controller_texas_holdem_bonus.game_stage = eStage.RIVER
 				//show the River
 				startIndex = 4;
 				endIndex = 4;

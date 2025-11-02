@@ -25,6 +25,8 @@
     {"name":"inst_5D9D803C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_1AF2E8D8","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_62776DBE","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_46ECCD0E","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7B1D167","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -59,6 +61,8 @@
         {"$GMRInstance":"v4","%Name":"inst_62776DBE","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_62776DBE","objectId":{"name":"Chip","path":"objects/Chip/Chip.yy",},"previewSprite":{"name":"spr_chip_one_hundred","path":"sprites/spr_chip_one_hundred/spr_chip_one_hundred.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Chip","path":"objects/Chip/Chip.yy",},"propertyId":{"name":"sprite_index","path":"objects/Chip/Chip.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_chip_one_hundred",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.24,"scaleY":0.24,"x":902.0,"y":959.68,},
+        {"$GMRInstance":"v4","%Name":"inst_46ECCD0E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_46ECCD0E","objectId":{"name":"btn_check","path":"objects/btn_check/btn_check.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":1299.0,"y":965.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7B1D167","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B1D167","objectId":{"name":"btn_fold","path":"objects/btn_fold/btn_fold.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":1152.0,"y":965.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_54F7529C1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_54F7529C1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.7673936,"scaleY":0.65122616,"spriteId":{"name":"spr_table_blue","path":"sprites/spr_table_blue/spr_table_blue.yy",},"x":768.0,"y":480.0,},

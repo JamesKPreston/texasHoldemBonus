@@ -1,12 +1,8 @@
 image_speed = 0;              // keep static frames
 image_index = 0;              // start normal
 pressed_inside = false;       // track if press began inside bounds
-button_id = "BET";
+button_id = "CHECK";
 use_gui = false; 
 on_click = function () {
-	controller_texas_holdem_bonus.progressGame();
-	if(controller_texas_holdem_bonus.game_stage > eStage.RIVER) {
-		return;
-	} 
-	controller_texas_holdem_bonus.bet();
+	controller_texas_holdem_bonus.progressGame(); 
 };
