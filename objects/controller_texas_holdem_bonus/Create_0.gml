@@ -52,9 +52,7 @@ player_total_bank = 1000;
 
 function bet() {
 	
-	player_total_bet = ante + bonus + flop + turn + river;
-	obj_chip_bank.text_value = player_total_bet;
-	obj_chip_bank.text_description = string(player_total_bet);
+
 	var denoms = [100, 25, 5, 1];
 	switch(game_stage)
 	{
@@ -84,6 +82,9 @@ function bet() {
 		break;
 		
 	}
+	player_total_bet = ante + bonus + flop + turn + river;
+	obj_chip_bank.text_value = player_total_bet;
+	obj_chip_bank.text_description = string(player_total_bet);
 }
 
 function progressGame() {
@@ -93,7 +94,6 @@ function progressGame() {
 	if(handType == "Community") {
 		switch(stage) {
 			case eStage.HOLE:
-				//Add Bet of 2x the Ante to the Flop bet position
 				//show the flop
 				startIndex = 0;
 				endIndex = 2;
@@ -127,7 +127,25 @@ function progressGame() {
 				for(i = 0; i <= 1; i ++) {
 					Cards[i].Flip();
 				}
-				Poker.Determine_winner();
+				var out  = Poker.Determine_winner();
+				obj_winner_text.text_description  = out.message;
+				if(out.result > 0) {
+					controller_texas_holdem_bonus.hand_winner = "PLAYER";
+					player_hand_rank = out.hero.category;
+					inst_player.best5 = out.hero.best5;
+					inst_community.best5 = out.hero.best5;
+				} else if (out.result < 0) {
+					controller_texas_holdem_bonus.hand_winner = "DEALER";
+					inst_dealer.best5 = out.dealer.best5;
+					inst_community.best5 = out.dealer.best5;
+				} else {
+					controller_texas_holdem_bonus.hand_winner = "TIE";
+				}
+				with(controller_texas_holdem_bonus)
+				{ 
+					payout();
+				}
+				
 			break;
 		}
 	}
@@ -170,121 +188,98 @@ function progressGame() {
 //	}
 				
 //}
-//function scr_payout() {
-//	var debug = false;
-//	var playerHand = [];
-//	var dealerHand = [];
-//	with(Deck)
-//	{
-//		with(player_hand) {
-//			for(i =0; i < 2; i ++) 
-//			{
-//				playerHand[i] = Poker.CardStructFromIndex(hand[i]);
-//			}
-//		}
-			
-//		with(dealer_hand) {
-//			for(i =0; i < 2; i ++) 
-//			{
-//				dealerHand[i] = Poker.CardStructFromIndex(hand[i]);
-//			}
-//		}
-	
-//	}
-
-//	with(obj_game) 
-//	{
-//		//Did Player Win ?
-//		if(obj_game.hand_winner == "PLAYER" || debug) {
-//			if(obj_game.player_hand_rank >= 4 || debug) {
-//				ante_payout = ante * 2;
-//				scr_payout_animation(obj_ante_payout,ante);
+function payout() {
+	//Did Player Win ?
+	if(hand_winner == "PLAYER" ) {
+		if(player_hand_rank >= 4) {
+			ante_payout = ante * 2;
+			//scr_payout_animation(obj_ante_payout,ante);
 		
-//			} else {
-//				ante_payout = ante;
-//			}
+		} else {
+			ante_payout = ante;
+		}
 		
-//			flop_payout = flop * 2;
-//			scr_payout_animation(obj_flop_payout,flop);
-//			//scr_rebuild_chips_for_target(obj_flop_payout, "FLOP", flop, [100, 25, 5, 1]);
-//			turn_payout = turn * 2;
-//			scr_payout_animation(obj_turn_payout,turn);
-//			//scr_rebuild_chips_for_target(obj_turn_payout, "TURN", turn, [100, 25, 5, 1]);
-//			river_payout = river * 2;
-//			//scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
-//			scr_payout_animation(obj_river_payout,river);
+		flop_payout = flop * 2;
+		//scr_payout_animation(obj_flop_payout,flop);
+		//scr_rebuild_chips_for_target(obj_flop_payout, "FLOP", flop, [100, 25, 5, 1]);
+		turn_payout = turn * 2;
+		//scr_payout_animation(obj_turn_payout,turn);
+		//scr_rebuild_chips_for_target(obj_turn_payout, "TURN", turn, [100, 25, 5, 1]);
+		river_payout = river * 2;
+		//scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
+		//scr_payout_animation(obj_river_payout,river);
 
-//		} 
-//		if(obj_game.hand_winner == "DEALER") {
-//			scr_destroy_chips_on_target(obj_ante,"ANTE");
-//			scr_destroy_chips_on_target(obj_flop,"FLOP");
-//			scr_destroy_chips_on_target(obj_turn,"TURN");
-//			scr_destroy_chips_on_target(obj_river,"RIVER");
-//		}
+	} 
+	if(hand_winner == "DEALER") {
+		//scr_destroy_chips_on_target(obj_ante,"ANTE");
+		//scr_destroy_chips_on_target(obj_flop,"FLOP");
+		//scr_destroy_chips_on_target(obj_turn,"TURN");
+		//scr_destroy_chips_on_target(obj_river,"RIVER");
+	}
 	
-//		//the player has a pocket pair
-//		if(playerHand[0].rank == playerHand[1].rank) {
-//			switch(playerHand[0].rank)
-//			{
-//				case 14:
-//					//check dealers hand
-//					if(dealerHand[0].rank == 14 && dealerHand[1].rank == 14) {
-//						bonus_payout = bonus * 1001;
-//					}
-//					else
-//					{
-//						bonus_payout = bonus * 31;
-//					}
-//				break;
-//				case 13:
-//				case 12:
-//				case 11:
-//					bonus_payout = bonus * 11;
-//				break;
-//				default:
-//					bonus_payout = bonus * 4;
-//				break;
+	//the player has a pocket pair
+	if(inst_player.Cards[0].Rank == inst_player.Cards[1].Rank) {
+		switch(inst_player.Cards[0].Rank)
+		{
+			case 14:
+				//check dealers hand
+				if(inst_dealer.Cards[0].Rank == 14 && inst_dealer.Cards[1].Rank == 14) {
+					bonus_payout = bonus * 1001;
+				}
+				else
+				{
+					bonus_payout = bonus * 31;
+				}
+			break;
+			case 13:
+			case 12:
+			case 11:
+				bonus_payout = bonus * 11;
+			break;
+			default:
+				bonus_payout = bonus * 4;
+			break;
 					
-//			}
-//		}
+		}
+	}
 			
-//		//players hand is suited
-//		if(playerHand[0].suit == playerHand[1].suit) {
-//			if(playerHand[0].rank == 14 || playerHand[1].rank == 14) {
-//				if(playerHand[0].rank == 13 || playerHand[1].rank == 13) {
-//					bonus_payout = bonus * 26;
-//				}
-//				if((playerHand[0].rank == 12 || playerHand[1].rank == 12) || (playerHand[0].rank == 11 || playerHand[1].rank == 11)) {
-//					bonus_payout = bonus * 21;
-//				}
-//			}
-//		} else {
-//			if(playerHand[0].rank == 14 || playerHand[1].rank == 14) {
-//					if(playerHand[0].rank == 13 || playerHand[1].rank == 13) {
-//						bonus_payout = bonus * 16;
-//					}
-//					if((playerHand[0].rank == 12 || playerHand[1].rank == 12) || (playerHand[0].rank == 11 || playerHand[1].rank == 11)) {
-//						bonus_payout = bonus * 6;
-//					}
-//				}
-//		}
-//		//scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);
-//		if(bonus_payout > 0) {
-//			scr_payout_animation(obj_bonus_payout,bonus_payout - bonus);
-//		} else {
-//			scr_destroy_chips_on_target(obj_bonus,"BONUS");
-//		}
-//		player_total_bank += ante_payout + bonus_payout + flop_payout + river_payout + turn_payout;
+	//players hand is suited
+	if(inst_player.Cards[0].Suit == inst_player.Cards[1].Suit) {
+		if(inst_player.Cards[0].Rank == 14 || inst_player.Cards[1].Rank == 14) {
+			if(inst_player.Cards[0].Rank == 13 || inst_player.Cards[1].Rank == 13) {
+				bonus_payout = bonus * 26;
+			}
+			if((inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) || (inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11)) {
+				bonus_payout = bonus * 21;
+			}
+		}
+	} else {
+		if(inst_player.Cards[0].Rank == 14 || inst_player.Cards[1].Rank == 14) {
+				if(inst_player.Cards[0].Rank == 13 || inst_player.Cards[1].Rank == 13) {
+					bonus_payout = bonus * 16;
+				}
+				if((inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) || (inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11)) {
+					bonus_payout = bonus * 6;
+				}
+			}
+	}
+	//scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);
+	if(bonus_payout > 0) {
+		//scr_payout_animation(obj_bonus_payout,bonus_payout - bonus);
+	} else {
+		//scr_destroy_chips_on_target(obj_bonus,"BONUS");
+	}
+	player_total_bank += ante_payout + bonus_payout + flop_payout + river_payout + turn_payout;
 
-//		//BONUS PAYOUT:
-//		//Hand	Payout
-//		//A-A (Player & Dealer)	1000 to 1
-//		//A-A (Player Only)	30 to 1
-//		//A-K (Suited)	25 to 1
-//		//A-Q or A-J (Suited)	20 to 1
-//		//A-K (Unsuited)	15 to 1
-//		//K-K or Q-Q or J-J	10 to 1
-//		//A-Q or A-J (Unsuited)	5 to 1
-//		//10-10 through 2-2 (Pairs)	3 to 1
-//	}
-//}
+	//BONUS PAYOUT:
+	//Hand	Payout
+	//A-A (Player & Dealer)	1000 to 1
+	//A-A (Player Only)	30 to 1
+	//A-K (Suited)	25 to 1
+	//A-Q or A-J (Suited)	20 to 1
+	//A-K (Unsuited)	15 to 1
+	//K-K or Q-Q or J-J	10 to 1
+	//A-Q or A-J (Unsuited)	5 to 1
+	//10-10 through 2-2 (Pairs)	3 to 1
+	
+}

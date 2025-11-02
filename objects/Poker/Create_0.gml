@@ -31,8 +31,8 @@ function Determine_winner() {
 		}
 	}
 	
-	var out = poker_showdown(playerHand.Cards, dealerHand.Cards, communityHand.Cards);
-	obj_winner_text.text_description  = out.message;
+	return poker_showdown(playerHand.Cards, dealerHand.Cards, communityHand.Cards);
+	
 }
 
 function poker_best5_from7(cards7) {
