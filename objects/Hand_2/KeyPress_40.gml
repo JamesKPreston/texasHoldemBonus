@@ -1,1 +1,1 @@
-drawing = true;
+room_restart()

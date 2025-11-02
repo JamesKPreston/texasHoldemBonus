@@ -1,5 +1,7 @@
-//This will be moved to a game controller
-with(Hand_2) {
+
+
+function progressGame() {
+	with(Hand_2) {
 	var startIndex = 0;
 	var endIndex = -1;
 	if(handType == "Community") {
@@ -32,14 +34,17 @@ with(Hand_2) {
 	
 	if(handType == "Dealer") {
 		switch(stage) {
-			case eStage.RIVER:
-			for(i = 0; i <= 1; i ++) {
-				Cards[i].FLIP();
-			}
+				case eStage.RIVER:
+				for(i = 0; i <= 1; i ++) {
+					Cards[i].FLIP();
+				}
+				Poker_2.Determine_winner();
 			break;
 		}
 	}
 	
 	stage++;
+
+}
 
 }

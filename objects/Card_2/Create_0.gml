@@ -1,5 +1,5 @@
 enum eSUIT { DIAMONDS, HEARTS, SPADES, CLUBS}
-enum eFACE { ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING}
+enum eRANK {  TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE,}
 enum eFACESTATE { FACEDOWN, FACEUP}
 suit_names = [
     "DIAMONDS",
@@ -7,16 +7,16 @@ suit_names = [
     "SPADES",
     "CLUBS"
 ];
-face_names = [
-"ACE", "2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING"
+rank_names = [
+ "2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING" ,"ACE",
 ]
 
 ShowBack = true;
 Suit = eSUIT.DIAMONDS;
-Face = eFACE.ACE;
+Rank = eRANK.ACE;
 
 scale(90,129);
-Init(eSUIT.DIAMONDS,eFACE.SIX);
+Init(eSUIT.DIAMONDS,eRANK.TWO);
 
 
 function scale(xScale, yScale) {
@@ -26,9 +26,9 @@ function scale(xScale, yScale) {
 	image_yscale = yScale / spr_h;
 }
 
-function Init(_suit, _face) {
+function Init(_suit, _rank) {
 	Suit = _suit;
-	Face = _face;
+	Rank = _rank;
 }
 
 
@@ -41,7 +41,7 @@ function FLIP() {
 	if(ShowBack) {
 		sprite_index = spr_card_back;
 	} else {
-		var spriteString = "spr_" + suit_names[Suit] + "_" + face_names[Face];
+		var spriteString = "spr_" + suit_names[Suit] + "_" + rank_names[Rank];
 		var spr = asset_get_index(string_lower(spriteString));
 		if (spr != -1) {
 		    sprite_index = spr;
@@ -55,13 +55,13 @@ function GetSprite() {
 	if(ShowBack) {
 		return spr_card_back;
 	} else {
-		var spriteString = "spr_" + suit_names[Suit] + "_" + face_names[Face];
+		var spriteString = "spr_" + suit_names[Suit] + "_" + rank_names[Rank];
 		return asset_get_index(string_lower(spriteString));
 	}
 }
 
 function ToString() {
-	return face_names[Face] + " of " + suit_names[Suit]
+	return rank_names[Rank] + " of " + suit_names[Suit]
 }
 
 function Highlight() {

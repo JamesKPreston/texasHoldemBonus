@@ -15,7 +15,7 @@ function InitDeck() {
             var c = instance_create_layer(x, y, "Instances", Card_2);
             with (c) {
                 Suit = s;
-                Face = r;
+                Rank = r;
                 scale(90, 129);
             }
             array_push(self.Cards, c);
