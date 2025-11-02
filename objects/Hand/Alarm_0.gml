@@ -1,7 +1,7 @@
 
 if (array_length(Cards) < maxHand) {
     // Deal two cards
-    Cards = Deck_2.DrawCards(maxHand);
+    Cards = Deck.DrawCards(maxHand);
 
     // Flip ONCE now (not every step), and scale
     for (var i = 0; i < array_length(Cards); i++) {

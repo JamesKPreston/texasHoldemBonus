@@ -9,8 +9,8 @@
   "name":"obj_player_bank",
   "overriddenProperties":[],
   "parent":{
-    "name":"Refactor",
-    "path":"folders/Objects/Classes/Refactor.yy",
+    "name":"Text",
+    "path":"folders/Objects/Refactor/Text.yy",
   },
   "parentObjectId":{
     "name":"obj_text",

@@ -1,19 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"Chip_2",
+  "%Name":"obj_bet_target",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Chip_2",
+  "name":"obj_bet_target",
   "overriddenProperties":[],
   "parent":{
-    "name":"Refactor",
-    "path":"folders/Objects/Classes/Refactor.yy",
+    "name":"Classes",
+    "path":"folders/Objects/Refactor/Classes.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_chip_five_hundred",
+    "path":"sprites/spr_chip_five_hundred/spr_chip_five_hundred.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

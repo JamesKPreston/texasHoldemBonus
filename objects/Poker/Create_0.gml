@@ -11,6 +11,30 @@
 ///   label: string           // human-readable like "Full House, Aces over Tens"
 /// }
 
+
+function Determine_winner() {
+	var dealerHand = "";
+	var playerHand = "";
+	var communityHand = "";
+	
+	with(Hand) {
+		switch(handType) {
+			case "Dealer":
+				dealerHand = self;
+			break;
+			case "Player":
+				playerHand = self;
+			break;
+			case "Community":
+				communityHand = self;
+			break;
+		}
+	}
+	
+	var out = poker_showdown(playerHand.Cards, dealerHand.Cards, communityHand.Cards);
+	obj_winner_text.text_description  = out.message;
+}
+
 function poker_best5_from7(cards7) {
     // Sanity
     if (array_length(cards7) != 7) {

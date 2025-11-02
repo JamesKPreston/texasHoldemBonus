@@ -1,5 +1,5 @@
 //This will be moved to a game controller
-with(Hand_2) {
+with(Hand) {
 	var startIndex = 0;
 	var endIndex = -1;
 	if(handType == "Community") {

@@ -2,5 +2,5 @@
 event_inherited();
 
 text_description = "1,000";
-text_value = game_controller.player_total_bank;
+text_value = controller_texas_holdem_bonus.player_total_bank;
 

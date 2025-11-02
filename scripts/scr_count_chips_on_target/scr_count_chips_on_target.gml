@@ -2,7 +2,7 @@
 function scr_count_chips_on_target(_target, _name)
 {
     var cnt = 0;
-    with (Chip_2)
+    with (Chip)
     {
         if (bet_target == _target && targetName == _name) cnt++;
     }

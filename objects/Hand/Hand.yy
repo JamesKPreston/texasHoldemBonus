@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"Hand_2",
+  "%Name":"Hand",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,11 +8,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":40,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Hand_2",
+  "name":"Hand",
   "overriddenProperties":[],
   "parent":{
-    "name":"Refactor",
-    "path":"folders/Objects/Classes/Refactor.yy",
+    "name":"Classes",
+    "path":"folders/Objects/Refactor/Classes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

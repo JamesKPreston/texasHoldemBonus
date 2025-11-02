@@ -5,7 +5,7 @@ button_id = "DRAW";
 sprite_index = spr_deal_button;
 use_gui = false; 
 on_click = function () {
-	with(Hand_2) {
+	with(Hand) {
 		drawing = true;
 	}
 	instance_change(btn_bet, true);

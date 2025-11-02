@@ -29,30 +29,29 @@ if (is_dragging) {
         depth = -py - drop_target.stack_count;
 		if(targetName = "ANTE")
 		{
-			game_controller.ante += chip_value;
+			controller_texas_holdem_bonus.ante += chip_value;
 
 		    // mark this chip as belonging to this target so it can be managed
 		    bet_target = inst_ante;
 
-		    if (!game_controller.is_rebuilding)
+		    if (!controller_texas_holdem_bonus.is_rebuilding)
 		    {
-				show_debug_message("DID GET HERE");
-		        scr_rebuild_chips_for_target(bet_target, targetName, game_controller.ante, denoms);
+		        scr_rebuild_chips_for_target(bet_target, targetName, controller_texas_holdem_bonus.ante, denoms);
 		    }
 		}
 		if(targetName = "BONUS") 
 		{
-			game_controller.bonus += chip_value;
+			controller_texas_holdem_bonus.bonus += chip_value;
 			bet_target = inst_bonus;
-			if (!game_controller.is_rebuilding)
+			if (!controller_texas_holdem_bonus.is_rebuilding)
 		    {
-		        scr_rebuild_chips_for_target(bet_target, targetName, game_controller.bonus, denoms);
+		        scr_rebuild_chips_for_target(bet_target, targetName, controller_texas_holdem_bonus.bonus, denoms);
 		    }
 		}
 
-		game_controller.player_total_bet = game_controller.ante + game_controller.bonus;
-		obj_chip_bank.text_value = game_controller.player_total_bet;
-		obj_chip_bank.text_description = string(game_controller.player_total_bet);
+		controller_texas_holdem_bonus.player_total_bet = controller_texas_holdem_bonus.ante + controller_texas_holdem_bonus.bonus;
+		obj_chip_bank.text_value = controller_texas_holdem_bonus.player_total_bet;
+		obj_chip_bank.text_description = string(controller_texas_holdem_bonus.player_total_bet);
 		//show_debug_message("Ante : " + string(obj_game.ante) );
 		//show_debug_message("Total : " + string(obj_game.player_total_bet ) );
 

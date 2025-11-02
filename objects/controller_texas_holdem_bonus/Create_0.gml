@@ -1,6 +1,6 @@
 
 
-if (instance_number(game_controller) > 1) { // prevent duplicates on room resets
+if (instance_number(controller_texas_holdem_bonus) > 1) { // prevent duplicates on room resets
     instance_destroy();
     exit;
 }
@@ -38,7 +38,7 @@ player_total_bank = 1000;
 //}
 
 function progressGame() {
-	with(Hand_2) {
+	with(Hand) {
 	var startIndex = 0;
 	var endIndex = -1;
 	if(handType == "Community") {
@@ -75,7 +75,7 @@ function progressGame() {
 				for(i = 0; i <= 1; i ++) {
 					Cards[i].FLIP();
 				}
-				Poker_2.Determine_winner();
+				Poker.Determine_winner();
 			break;
 		}
 	}

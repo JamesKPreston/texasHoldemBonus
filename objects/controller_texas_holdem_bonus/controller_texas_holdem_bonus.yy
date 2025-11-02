@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"PokerEvaluator_2",
+  "%Name":"controller_texas_holdem_bonus",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"PokerEvaluator_2",
+  "name":"controller_texas_holdem_bonus",
   "overriddenProperties":[],
   "parent":{
-    "name":"Refactor",
-    "path":"folders/Objects/Classes/Refactor.yy",
+    "name":"Classes",
+    "path":"folders/Objects/Refactor/Classes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

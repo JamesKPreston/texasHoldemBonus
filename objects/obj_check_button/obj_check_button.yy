@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
-    "path":"folders/Objects/Classes/Refactor/Buttons.yy",
+    "path":"folders/Objects/Refactor/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

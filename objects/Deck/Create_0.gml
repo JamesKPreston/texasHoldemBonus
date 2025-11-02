@@ -12,7 +12,7 @@ function InitDeck() {
     self.Cards = [];
     for (var s = 0; s < 4; s++) {
         for (var r = 0; r < 13; r++) {
-            var c = instance_create_layer(x, y, "Instances", Card_2);
+            var c = instance_create_layer(x, y, "Instances", Card);
             with (c) {
                 Suit = s;
                 Rank = r;
