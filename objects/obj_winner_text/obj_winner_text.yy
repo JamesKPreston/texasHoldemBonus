@@ -8,8 +8,8 @@
   "name":"obj_winner_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"Betting",
-    "path":"folders/Objects/Betting.yy",
+    "name":"Refactor",
+    "path":"folders/Objects/Classes/Refactor.yy",
   },
   "parentObjectId":{
     "name":"obj_text",

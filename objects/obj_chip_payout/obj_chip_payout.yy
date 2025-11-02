@@ -14,10 +14,7 @@
     "name":"Parents",
     "path":"folders/Objects/Parents.yy",
   },
-  "parentObjectId":{
-    "name":"obj_chip",
-    "path":"objects/obj_chip/obj_chip.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

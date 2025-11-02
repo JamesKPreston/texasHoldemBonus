@@ -41,8 +41,8 @@ function FLIP() {
 	if(ShowBack) {
 		sprite_index = spr_card_back;
 	} else {
-		var spriteString = "spr_" + suit_names[Suit] + "_" + rank_names[Rank];
-		var spr = asset_get_index(string_lower(spriteString));
+		var spriteString = string_lower("spr_" + suit_names[Suit] + "_" + rank_names[Rank]);
+		var spr = asset_get_index(spriteString);
 		if (spr != -1) {
 		    sprite_index = spr;
 		} else {

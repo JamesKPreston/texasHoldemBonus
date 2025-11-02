@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_river_payout",
-  "eventList":[],
+  "%Name":"bet_target1",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_river_payout",
+  "name":"bet_target1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Betting",
-    "path":"folders/Objects/Betting.yy",
+    "name":"Refactor",
+    "path":"folders/Objects/Classes/Refactor.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -23,7 +25,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"sprite_index","filters":[],"listItems":[],"multiselect":false,"name":"sprite_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"sprite_index","varType":4,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

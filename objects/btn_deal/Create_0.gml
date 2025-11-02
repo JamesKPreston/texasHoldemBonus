@@ -5,7 +5,6 @@ button_id = "DRAW";
 sprite_index = spr_deal_button;
 use_gui = false; 
 on_click = function () {
-	show_debug_message("test");
 	with(Hand_2) {
 		drawing = true;
 	}

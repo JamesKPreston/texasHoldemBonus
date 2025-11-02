@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bet_button_2",
-    "path":"sprites/spr_bet_button_2/spr_bet_button_2.yy",
+    "name":"spr_bet_button",
+    "path":"sprites/spr_bet_button/spr_bet_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

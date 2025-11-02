@@ -9,12 +9,9 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
-    "path":"folders/Objects/Buttons.yy",
+    "path":"folders/Objects/Classes/Refactor/Buttons.yy",
   },
-  "parentObjectId":{
-    "name":"obj_button",
-    "path":"objects/obj_button/obj_button.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fold_button_2",
-    "path":"sprites/spr_fold_button_2/spr_fold_button_2.yy",
+    "name":"spr_fold_button",
+    "path":"sprites/spr_fold_button/spr_fold_button.yy",
   },
   "spriteMaskId":null,
   "visible":false,
