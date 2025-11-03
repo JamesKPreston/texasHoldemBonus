@@ -10,8 +10,8 @@
   "name":"obj_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
+    "name":"Text",
+    "path":"folders/Objects/Refactor/Text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

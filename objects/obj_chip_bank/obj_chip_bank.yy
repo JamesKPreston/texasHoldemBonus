@@ -8,8 +8,8 @@
   "name":"obj_chip_bank",
   "overriddenProperties":[],
   "parent":{
-    "name":"Betting",
-    "path":"folders/Objects/Betting.yy",
+    "name":"Text",
+    "path":"folders/Objects/Refactor/Text.yy",
   },
   "parentObjectId":{
     "name":"obj_text",

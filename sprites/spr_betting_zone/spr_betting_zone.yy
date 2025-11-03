@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_betting_zone",
   "bboxMode":0,
   "bbox_bottom":293,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5dadf4bf-2d1c-4716-8acd-f0797f534f88","name":"5dadf4bf-2d1c-4716-8acd-f0797f534f88","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5dadf4bf-2d1c-4716-8acd-f0797f534f88","name":"5dadf4bf-2d1c-4716-8acd-f0797f534f88","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

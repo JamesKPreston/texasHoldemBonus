@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_init_sprite_array",
   "parent":{
-    "name":"Deck",
-    "path":"folders/Scripts/Helpers/Deck.yy",
+    "name":"Helpers",
+    "path":"folders/Scripts/Helpers.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
