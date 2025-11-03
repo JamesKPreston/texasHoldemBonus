@@ -56,6 +56,9 @@ function bet() {
 	var denoms = [100, 25, 5, 1];
 	switch(game_stage)
 	{
+		case eStage.HOLE:
+			player_total_bank -= ante + bonus;
+			break;
 		case eStage.FLOP:
 			flop =  ante * 2;
 			player_total_bank -= flop;
@@ -131,7 +134,7 @@ function progressGame() {
 				obj_winner_text.text_description  = out.message;
 				if(out.result > 0) {
 					controller_texas_holdem_bonus.hand_winner = "PLAYER";
-					player_hand_rank = out.hero.category;
+					controller_texas_holdem_bonus.player_hand_rank = out.hero.category;
 					inst_player.best5 = out.hero.best5;
 					inst_community.best5 = out.hero.best5;
 				} else if (out.result < 0) {
@@ -156,74 +159,83 @@ function progressGame() {
 
 }
 
-//function scr_payout_animation(target,total){
-//	var change  = chips_for_amount(total,[100,25,5,1]);
-//	var chipIndex = 0;
-//	var chip = noone;
-//	for(i = 0; i < array_length(change.counts); i ++)
-//	{
-//		for(j = 0; j < change.counts[i]; j ++)
-//		{
-//				chip = instance_create_layer(1200,200,"Instances",obj_chip_payout);
-//				chip.payout_target = target;
-//				chip.xPos = target.x;
-//				chip.yPos = target.y;
-//				chip.chip_index = chipIndex;
-//				chipIndex ++;
-//			switch(i) {
-//				case 0:	
-//					chip.sprite_index = spr_chip_one_hundred;
-//					break;
-//				case 1:
-//					chip.sprite_index = spr_chip_twenty_five;
-//					break;
-//				case 2:
-//					chip.sprite_index = spr_chip_five;
-//					break;
-//				case 3:
-//					chip.sprite_index = spr_chip_one;
-//					break;
-//			}
-//		}
-//	}
+function scr_payout_animation(target,total){
+	var change  = chips_for_amount(total,[10000,5000,1000,500,100,25,5,1]);
+	var chipIndex = 0;
+	var chip = noone;
+	for(i = 0; i < array_length(change.counts); i ++)
+	{
+		for(j = 0; j < change.counts[i]; j ++)
+		{
+				chip = instance_create_layer(1200,200,"Instances",obj_chip_payout);
+				chip.payout_target = target;
+				chip.xPos = target.x;
+				chip.yPos = target.y;
+				chip.chip_index = chipIndex;
+				chipIndex ++;
+			switch(i) {
+				case 0:
+					chip.sprite_index = spr_chip_ten_thousand;
+					break;
+				case 1:
+					chip.sprite_index = spr_chip_five_thousand;
+				break;
+				case 2:
+					chip.sprite_index = spr_chip_one_thousand;
+					break;
+				case 3:
+					chip.sprite_index = spr_chip_five_hundred;
+					break;
+				case 4:	
+					chip.sprite_index = spr_chip_one_hundred;
+					break;
+				case 5:
+					chip.sprite_index = spr_chip_twenty_five;
+					break;
+				case 6:
+					chip.sprite_index = spr_chip_five;
+					break;
+				case 7:
+					chip.sprite_index = spr_chip_one;
+					break;
+			}
+		}
+	}
 				
-//}
+}
 function payout() {
 	//Did Player Win ?
 	if(hand_winner == "PLAYER" ) {
 		if(player_hand_rank >= 4) {
 			ante_payout = ante * 2;
-			//scr_payout_animation(obj_ante_payout,ante);
+			scr_payout_animation(inst_ante_payout, ante);
 		
 		} else {
 			ante_payout = ante;
 		}
 		
 		flop_payout = flop * 2;
-		//scr_payout_animation(obj_flop_payout,flop);
-		//scr_rebuild_chips_for_target(obj_flop_payout, "FLOP", flop, [100, 25, 5, 1]);
+		scr_payout_animation(inst_flop_payout,flop);
 		turn_payout = turn * 2;
-		//scr_payout_animation(obj_turn_payout,turn);
-		//scr_rebuild_chips_for_target(obj_turn_payout, "TURN", turn, [100, 25, 5, 1]);
+		scr_payout_animation(inst_turn_payout,turn);
 		river_payout = river * 2;
-		//scr_rebuild_chips_for_target(obj_river_payout, "RIVER", river, [100, 25, 5, 1]);
-		//scr_payout_animation(obj_river_payout,river);
+		scr_payout_animation(inst_river_payout,river);
 
 	} 
 	if(hand_winner == "DEALER") {
-		//scr_destroy_chips_on_target(obj_ante,"ANTE");
-		//scr_destroy_chips_on_target(obj_flop,"FLOP");
-		//scr_destroy_chips_on_target(obj_turn,"TURN");
-		//scr_destroy_chips_on_target(obj_river,"RIVER");
+		scr_destroy_chips_on_target(inst_ante,"ANTE");
+		scr_destroy_chips_on_target(inst_flop,"FLOP");
+		scr_destroy_chips_on_target(inst_turn,"TURN");
+		scr_destroy_chips_on_target(inst_river,"RIVER");
 	}
 	
 	//the player has a pocket pair
 	if(inst_player.Cards[0].Rank == inst_player.Cards[1].Rank) {
 		switch(inst_player.Cards[0].Rank)
 		{
-			case 14:
+			case 12:
 				//check dealers hand
-				if(inst_dealer.Cards[0].Rank == 14 && inst_dealer.Cards[1].Rank == 14) {
+				if(inst_dealer.Cards[0].Rank == 12 && inst_dealer.Cards[1].Rank == 12) {
 					bonus_payout = bonus * 1001;
 				}
 				else
@@ -231,9 +243,9 @@ function payout() {
 					bonus_payout = bonus * 31;
 				}
 			break;
-			case 13:
-			case 12:
 			case 11:
+			case 10:
+			case 9:
 				bonus_payout = bonus * 11;
 			break;
 			default:
@@ -245,31 +257,34 @@ function payout() {
 			
 	//players hand is suited
 	if(inst_player.Cards[0].Suit == inst_player.Cards[1].Suit) {
-		if(inst_player.Cards[0].Rank == 14 || inst_player.Cards[1].Rank == 14) {
-			if(inst_player.Cards[0].Rank == 13 || inst_player.Cards[1].Rank == 13) {
+		if(inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) {
+			if(inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11) {
 				bonus_payout = bonus * 26;
 			}
-			if((inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) || (inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11)) {
+			if((inst_player.Cards[0].Rank == 10 || inst_player.Cards[1].Rank == 10) || (inst_player.Cards[0].Rank == 9 || inst_player.Cards[1].Rank == 9)) {
 				bonus_payout = bonus * 21;
 			}
 		}
 	} else {
-		if(inst_player.Cards[0].Rank == 14 || inst_player.Cards[1].Rank == 14) {
-				if(inst_player.Cards[0].Rank == 13 || inst_player.Cards[1].Rank == 13) {
+		if(inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) {
+				if(inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11) {
 					bonus_payout = bonus * 16;
 				}
-				if((inst_player.Cards[0].Rank == 12 || inst_player.Cards[1].Rank == 12) || (inst_player.Cards[0].Rank == 11 || inst_player.Cards[1].Rank == 11)) {
+				if((inst_player.Cards[0].Rank == 10 || inst_player.Cards[1].Rank == 10) || (inst_player.Cards[0].Rank == 9 || inst_player.Cards[1].Rank == 9)) {
 					bonus_payout = bonus * 6;
 				}
 			}
 	}
-	//scr_rebuild_chips_for_target(obj_bonus_payout, "BONUS", bonus_payout - bonus, [100, 25, 5, 1]);
 	if(bonus_payout > 0) {
-		//scr_payout_animation(obj_bonus_payout,bonus_payout - bonus);
+		scr_payout_animation(inst_bonus_payout,bonus_payout - bonus);
+		
+		//scr_rebuild_chips_for_target(inst_bonus_payout, "BONUS", bonus_payout - bonus, [10000,1000,500,100,25,5,1]);
+		
 	} else {
-		//scr_destroy_chips_on_target(obj_bonus,"BONUS");
+		scr_destroy_chips_on_target(inst_bonus,"BONUS");
 	}
 	player_total_bank += ante_payout + bonus_payout + flop_payout + river_payout + turn_payout;
+	
 
 	//BONUS PAYOUT:
 	//Hand	Payout

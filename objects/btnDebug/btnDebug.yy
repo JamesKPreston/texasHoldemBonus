@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_river_payout",
-  "eventList":[],
+  "%Name":"btnDebug",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_river_payout",
+  "name":"btnDebug",
   "overriddenProperties":[],
   "parent":{
-    "name":"Betting",
-    "path":"folders/Objects/Betting.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/Refactor/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_chip_five_hundred",
-    "path":"sprites/spr_chip_five_hundred/spr_chip_five_hundred.yy",
+    "name":"spr_check_button",
+    "path":"sprites/spr_check_button/spr_check_button.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

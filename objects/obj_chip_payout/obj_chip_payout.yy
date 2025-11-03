@@ -11,8 +11,8 @@
   "name":"obj_chip_payout",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
+    "name":"Classes",
+    "path":"folders/Objects/Refactor/Classes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

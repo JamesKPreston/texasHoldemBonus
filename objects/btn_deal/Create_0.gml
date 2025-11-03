@@ -8,6 +8,6 @@ on_click = function () {
 	with(Hand) {
 		drawing = true;
 	}
+	controller_texas_holdem_bonus.bet();
 	instance_change(btn_bet, true);
-
 };
