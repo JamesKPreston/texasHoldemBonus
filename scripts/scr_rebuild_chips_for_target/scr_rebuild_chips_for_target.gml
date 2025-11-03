@@ -11,7 +11,7 @@ function scr_rebuild_chips_for_target(_target, _name, _total, _denoms)
     }
 
     // Guard so created chips don’t re-enter the rebuild block
-    controller_texas_holdem_bonus.is_rebuilding = true;
+    thb_controller.is_rebuilding = true;
 
     // Clear existing chips for this target/name
     scr_destroy_chips_on_target(_target, _name);
@@ -42,5 +42,5 @@ function scr_rebuild_chips_for_target(_target, _name, _total, _denoms)
         }
     }
 
-    controller_texas_holdem_bonus.is_rebuilding = false;
+    thb_controller.is_rebuilding = false;
 }

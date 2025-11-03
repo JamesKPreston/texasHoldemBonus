@@ -1,6 +1,6 @@
 
 
-if (instance_number(controller_texas_holdem_bonus) > 1) { // prevent duplicates on room resets
+if (instance_number(thb_controller) > 1) { // prevent duplicates on room resets
     instance_destroy();
     exit;
 }
@@ -100,16 +100,16 @@ function progressGame() {
 				//show the flop
 				startIndex = 0;
 				endIndex = 2;
-				controller_texas_holdem_bonus.game_stage = eStage.FLOP;
+				thb_controller.game_stage = eStage.FLOP;
 				break;
 			case eStage.FLOP:
-				controller_texas_holdem_bonus.game_stage = eStage.TURN
+				thb_controller.game_stage = eStage.TURN
 				//show the turn
 				startIndex = 3;
 				endIndex = 3;
 				break;
 			case eStage.TURN:
-				controller_texas_holdem_bonus.game_stage = eStage.RIVER
+				thb_controller.game_stage = eStage.RIVER
 				//show the River
 				startIndex = 4;
 				endIndex = 4;
@@ -133,18 +133,18 @@ function progressGame() {
 				var out  = Poker.Determine_winner();
 				obj_winner_text.text_description  = out.message;
 				if(out.result > 0) {
-					controller_texas_holdem_bonus.hand_winner = "PLAYER";
-					controller_texas_holdem_bonus.player_hand_rank = out.hero.category;
+					thb_controller.hand_winner = "PLAYER";
+					thb_controller.player_hand_rank = out.hero.category;
 					inst_player.best5 = out.hero.best5;
 					inst_community.best5 = out.hero.best5;
 				} else if (out.result < 0) {
-					controller_texas_holdem_bonus.hand_winner = "DEALER";
+					thb_controller.hand_winner = "DEALER";
 					inst_dealer.best5 = out.dealer.best5;
 					inst_community.best5 = out.dealer.best5;
 				} else {
-					controller_texas_holdem_bonus.hand_winner = "TIE";
+					thb_controller.hand_winner = "TIE";
 				}
-				with(controller_texas_holdem_bonus)
+				with(thb_controller)
 				{ 
 					payout();
 				}

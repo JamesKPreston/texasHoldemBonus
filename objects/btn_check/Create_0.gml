@@ -4,5 +4,5 @@ pressed_inside = false;       // track if press began inside bounds
 button_id = "CHECK";
 use_gui = false; 
 on_click = function () {
-	controller_texas_holdem_bonus.progressGame(); 
+	thb_controller.progressGame(); 
 };

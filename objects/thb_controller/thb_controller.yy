@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"controller_texas_holdem_bonus",
+  "%Name":"thb_controller",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"controller_texas_holdem_bonus",
+  "name":"thb_controller",
   "overriddenProperties":[],
   "parent":{
     "name":"Classes",
