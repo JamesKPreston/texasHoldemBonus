@@ -12,6 +12,9 @@ on_click = function () {
 	}
 	thb_controller.bet();
 	instance_change(btn_bet, true);
+	with(Chip) {
+		disabled = true;
+	}
 	btn_fold.visible = true;
 	btn_check.visible = true;
 };
