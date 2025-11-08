@@ -7,6 +7,7 @@ use_gui = false;
 enabled = false;
 on_click = function () {
 	if(!enabled) { return;}
+	
 	with(Hand) {
 		drawing = true;
 	}
