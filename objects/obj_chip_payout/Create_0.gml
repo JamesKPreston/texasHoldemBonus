@@ -1,5 +1,4 @@
-// Inherit the parent event
-event_inherited();
+
 
 // If you want it even tighter, delete the items with 2s, or set a scale < 1 (see below).
 
