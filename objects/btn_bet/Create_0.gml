@@ -6,6 +6,7 @@ use_gui = false;
 on_click = function () {
 	thb_controller.progressGame();
 	if(thb_controller.game_stage > eStage.RIVER) {
+
 		return;
 	} 
 	thb_controller.bet();

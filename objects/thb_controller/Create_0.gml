@@ -23,8 +23,6 @@ river_payout = 0;
 
 player_total_bet = 0;
 player_total_bank = 1000;
-
-
 //function showWinner(_text, _seconds, _color) {
 	
 //    winner_text   = _text;
@@ -110,6 +108,7 @@ function progressGame() {
 				break;
 			case eStage.TURN:
 				thb_controller.game_stage = eStage.RIVER
+				thb_controller.alarm[1] = 30;
 				//show the River
 				startIndex = 4;
 				endIndex = 4;
@@ -147,6 +146,7 @@ function progressGame() {
 				with(thb_controller)
 				{ 
 					payout();
+					alarm[0] = 150;
 				}
 				
 			break;
@@ -277,8 +277,6 @@ function payout() {
 	}
 	if(bonus_payout > 0) {
 		scr_payout_animation(inst_bonus_payout,bonus_payout - bonus);
-		
-		//scr_rebuild_chips_for_target(inst_bonus_payout, "BONUS", bonus_payout - bonus, [10000,1000,500,100,25,5,1]);
 		
 	} else {
 		scr_destroy_chips_on_target(inst_bonus,"BONUS");

@@ -41,3 +41,4 @@ if (pressed_inside && !over && mouse_check_button(mb_left)) {
 if (!mouse_check_button(mb_left) && !pressed_inside) {
     image_index = 0;
 }
+

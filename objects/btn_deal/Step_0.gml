@@ -1,3 +1,4 @@
+if(!enabled) { return;}
 /// obj_button: Step
 // Get mouse position in the correct space
 var mx, my;

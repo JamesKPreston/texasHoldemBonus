@@ -22,5 +22,6 @@ on_click = function () {
 		river_payout = 0;
 		
 	}
+
 	room_restart();
 };
