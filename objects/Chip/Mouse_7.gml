@@ -2,6 +2,7 @@ if (is_dragging) {
     is_dragging = false;
 
     if (instance_exists(drop_target)) {
+		disabled = true;
         // --- Safeguard defaults in case an ante was missing them
         var dx   = is_undefined(drop_target.stack_dx)   ? 6 : drop_target.stack_dx;
         var dy   = is_undefined(drop_target.stack_dy)   ? 6 : drop_target.stack_dy;
