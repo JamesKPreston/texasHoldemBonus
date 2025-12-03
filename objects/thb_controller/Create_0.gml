@@ -209,6 +209,9 @@ function payout() {
 		river_payout = 0;
 		turn_payout = 0;
 	}
+	if(hand_winner == "TIE") {
+		player_total_bank += ante  + flop + river + turn;
+	}
 	
 	//the player has a pocket pair
 	if(inst_player.Cards[0].Rank == inst_player.Cards[1].Rank) {
