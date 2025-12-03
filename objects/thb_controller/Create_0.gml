@@ -22,7 +22,7 @@ river_payout = 0;
 
 
 player_total_bet = 0;
-player_total_bank = 1000;
+player_total_bank = 500;
 
 function bet() {
 	
@@ -35,6 +35,7 @@ function bet() {
 			break;
 		case eStage.FLOP:
 			flop =  ante * 2;
+
 			player_total_bank -= flop;
 			if (!is_rebuilding)
 			{
@@ -43,6 +44,7 @@ function bet() {
 		break;
 		case eStage.TURN:
 			turn =  ante;
+
 			player_total_bank -= turn;
 			if (!is_rebuilding)
 			{
@@ -51,6 +53,7 @@ function bet() {
 		break;
 		case eStage.RIVER:
 			river =  ante;
+
 			player_total_bank -= river;
 			if (!is_rebuilding)
 			{

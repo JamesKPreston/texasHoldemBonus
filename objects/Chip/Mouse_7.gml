@@ -50,6 +50,18 @@ if (is_dragging) {
 		    }
 		}
 
+		if(thb_controller.ante + thb_controller.bonus > thb_controller.player_total_bank) {
+			if(targetName = "ANTE") {
+				thb_controller.ante -= chip_value;
+			}
+			if(targetName = "BONUS") 
+			{
+				thb_controller.bonus -= chip_value;
+			}
+			instance_destroy();
+			drop_target = noone;
+			return;
+		}
 		thb_controller.player_total_bet = thb_controller.ante + thb_controller.bonus;
 		obj_chip_bank.text_value = thb_controller.player_total_bet;
 		obj_chip_bank.text_description = string(thb_controller.player_total_bet);
