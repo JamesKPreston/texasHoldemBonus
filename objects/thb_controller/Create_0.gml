@@ -23,30 +23,6 @@ river_payout = 0;
 
 player_total_bet = 0;
 player_total_bank = 1000;
-//function showWinner(_text, _seconds, _color) {
-	
-//    winner_text   = _text;
-//	obj_winner_text.text_description = winner_text;
-//    winner_color  = is_undefined(_color) ? c_yellow : _color;
-    
-//    winner_seconds = _seconds;
-//    show_winner   = true;
-//    var steps_per_second = game_get_speed(gamespeed_fps);
-//	alarm[ALRM.WINNER] = max(1, round(_seconds * steps_per_second));
-//}
-
-	//obj_game.player_total_bet = obj_game.ante + obj_game.bonus + obj_game.flop + obj_game.turn + obj_game.river;
-	//obj_chip_bank.text_value = obj_game.player_total_bet;
-	//obj_chip_bank.text_description = string(obj_game.player_total_bet);
-	
-	//var denoms = [100, 25, 5, 1];
-	//switch(obj_game.hand_stage) {
-	//	case "FLOP":
-	//	obj_game.player_total_bank -= obj_game.flop;
-	//		if (!obj_game.is_rebuilding)
-	//		{
-	//		    scr_rebuild_chips_for_target(obj_flop, "FLOP", obj_game.flop, denoms);
-	//		}
 
 function bet() {
 	
@@ -203,6 +179,7 @@ function scr_payout_animation(target,total){
 	}
 				
 }
+
 function payout() {
 	//Did Player Win ?
 	if(hand_winner == "PLAYER" ) {
@@ -227,6 +204,10 @@ function payout() {
 		scr_destroy_chips_on_target(inst_flop,"FLOP");
 		scr_destroy_chips_on_target(inst_turn,"TURN");
 		scr_destroy_chips_on_target(inst_river,"RIVER");
+		ante_payout = 0;
+		flop_payout = 0;
+		river_payout = 0;
+		turn_payout = 0;
 	}
 	
 	//the player has a pocket pair
